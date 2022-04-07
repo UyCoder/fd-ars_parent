@@ -11,6 +11,8 @@
 
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
+    <version>1.0</version>
+
     <modules>
         <module>service_user</module>
         <module>service_hospital</module>
@@ -25,6 +27,11 @@
         <dependency>
             <groupId>dev.ahmed</groupId>
             <artifactId>model</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.ahmed</groupId>
+            <artifactId>service_util</artifactId>
             <version>1.0</version>
         </dependency>
         <!--web-->
@@ -48,6 +55,8 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
+
         <!-- 服务调用feign -->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->
