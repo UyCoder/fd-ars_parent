@@ -47,7 +47,7 @@ public class Swagger2Config {
     private ApiInfo webApiInfo(){
 
         return new ApiInfoBuilder()
-                .title("ForumDent_AppointmentAndRegisteration-API_Doc")
+                .title("ForumDent-API_Doc")
                 .description("This is a simple API for ForumDent_AppointmentAndRegisteration")
                 .version("1.0")
                 .contact(new Contact("Forum_Dent", "http://ForumDent.com", "ahmedBughra@gmail.com"))

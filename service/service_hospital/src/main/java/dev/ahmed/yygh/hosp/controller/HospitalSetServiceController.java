@@ -2,6 +2,8 @@ package dev.ahmed.yygh.hosp.controller;
 
 import dev.ahmed.yygh.hosp.service.HospitalSetService;
 import dev.ahmed.yygh.model.hosp.HospitalSet;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import java.util.List;
  * @Email: AhmedBughra@gmail.com
  * @CreatedWith: IntelliJ IDEA
  */
+@Api(tags = "HospitalSetController")
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
 public class HospitalSetServiceController {
@@ -22,6 +25,7 @@ public class HospitalSetServiceController {
     // http://localhost:8201/admin/hosp/hospitalSet/findAll
 
     // 1. find all hospitalSet
+    @ApiOperation(value = "find all hospitalSet")
     @GetMapping("findAll")
     public List<HospitalSet> findAllHospitalSet() {
         List<HospitalSet> list = hospitalSetService.list();
@@ -32,6 +36,7 @@ public class HospitalSetServiceController {
     // 3. add hospitalSet
     // 4. update hospitalSet
     // 5. delete hospitalSet
+    @ApiOperation(value = "Logical delete hospitalSet by id")
     @DeleteMapping("{id}")
     public boolean deleteHospitalSet(@PathVariable Long id) {
         boolean flag = hospitalSetService.removeById(id);
