@@ -2,6 +2,7 @@ package dev.ahmed.yygh.hosp.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import dev.ahmed.yygh.common.exception.YyghException;
 import dev.ahmed.yygh.common.result.Result;
 import dev.ahmed.yygh.common.utils.MD5;
 import dev.ahmed.yygh.hosp.service.HospitalSetService;
@@ -107,6 +108,13 @@ public class HospitalSetServiceController {
     @ApiOperation(value = "get hospitalSet by id")
     @GetMapping("getHospSet/{id}")
     public Result getHospSet(@PathVariable Long id) {
+    try {
+        // mock exception
+        int i = 1 / 0;
+    } catch (Exception e) {
+        throw new YyghException("Failed", 201);
+    }
+
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         return Result.ok(hospitalSet);
         }
