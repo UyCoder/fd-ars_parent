@@ -3,6 +3,7 @@ package dev.ahmed.yygh.hosp.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import dev.ahmed.yygh.common.result.Result;
+import dev.ahmed.yygh.common.utils.MD5;
 import dev.ahmed.yygh.hosp.service.HospitalSetService;
 import dev.ahmed.yygh.model.hosp.HospitalSet;
 import dev.ahmed.yygh.vo.hosp.HospitalSetQueryVo;
@@ -14,7 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
+import java.util.Random;
 
 /**
  * @Created: 4/8/2022 00:36
@@ -37,6 +40,8 @@ public class HospitalSetServiceController {
         List<HospitalSet> list = hospitalSetService.list();
         return Result.ok(list);
     }
+
+
     // 2. delet hospitalSet
     @ApiOperation(value = "Logical delete hospitalSet by id")
     @DeleteMapping("{id}")
@@ -49,8 +54,9 @@ public class HospitalSetServiceController {
         }
     }
 
+
     // 3. find hospital with conditional query and paging
-    @ApiOperation(value = "find hospitalSet with paging")
+    @ApiOperation(value = "find hospital with conditional query and paging")
     @PostMapping("findPage/{current}/{limit}")
     public Result findPageHospSet(@PathVariable Long current,
                                   @PathVariable Long limit,
@@ -73,11 +79,32 @@ public class HospitalSetServiceController {
         Page<HospitalSet> pageHospitalSet = hospitalSetService.page(page, queryWrapper);
 
         return Result.ok(pageHospitalSet);
-
     }
+
+
     // 4. add hospitalSet
+    @ApiOperation(value = "add hospitalSet")
+    @PostMapping("saveHospitalSet")
+    public Result saveHospitalSet(@RequestBody HospitalSet hospitalSet) {
+        // config hospitalSet status to 1
+        hospitalSet.setStatus(1);
+
+        // encrypt hospitalSet
+        Random random = new Random();
+        hospitalSet.setSignKey(MD5.encrypt(System.currentTimeMillis() + ""+ random.nextInt(100)));
+
+        // save hospitalSet and return result
+        boolean flag = hospitalSetService.save(hospitalSet);
+        if (flag) {
+            return Result.ok();
+        } else {
+            return Result.fail();
+    }
+
+
     // 5. update hospitalSet by id
     // 6. delete hospitalSet
     // 7. multiple delete hospitalSet
 
+}
 }
