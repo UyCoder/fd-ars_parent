@@ -108,13 +108,12 @@ public class HospitalSetServiceController {
     @ApiOperation(value = "get hospitalSet by id")
     @GetMapping("getHospSet/{id}")
     public Result getHospSet(@PathVariable Long id) {
-    try {
-        // mock exception
-        int i = 1 / 0;
-    } catch (Exception e) {
-        throw new YyghException("Failed", 201);
-    }
-
+//        // mock exception
+//    try {
+//        int i = 1 / 0;
+//    } catch (Exception e) {
+//        throw new YyghException("Failed", 201);
+//    }
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         return Result.ok(hospitalSet);
         }
