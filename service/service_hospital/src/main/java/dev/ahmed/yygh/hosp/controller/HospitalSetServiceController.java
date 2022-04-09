@@ -132,5 +132,34 @@ public class HospitalSetServiceController {
         hospitalSetService.removeByIds(ids);
             return Result.ok();
     }
+
+
+    // 8. config hospitalSet lock status
+    @ApiOperation(value = "config hospitalSet lock status")
+    @PutMapping("lockHospitalSet/{id}/{status}")
+    public Result lockHospitalSet(@PathVariable Long id,
+                                  @PathVariable Integer status) {
+        // get hospitalSet by id
+        HospitalSet hospitalSet = hospitalSetService.getById(id);
+        // config hospitalSet lock status
+        hospitalSet.setStatus(status);
+        // update hospitalSet and return result
+        hospitalSetService.updateById(hospitalSet);
+        return Result.ok();
+    }
+
+    // 9. send encrypt key to hospitalSet
+    @ApiOperation(value = "send encrypt key to hospitalSet")
+    @PutMapping("sendKey/{id}")
+    public Result sendKey(@PathVariable Long id) {
+        // get hospitalSet by id
+        HospitalSet hospitalSet = hospitalSetService.getById(id);
+        String signKey = hospitalSet.getSignKey();
+        String hoscode = hospitalSet.getHoscode();
+        //TODO: send key to hospitalSet
+        return Result.ok();
+    }
+
 }
+
 
