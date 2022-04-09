@@ -99,12 +99,38 @@ public class HospitalSetServiceController {
             return Result.ok();
         } else {
             return Result.fail();
+        }
     }
 
 
     // 5. update hospitalSet by id
-    // 6. delete hospitalSet
-    // 7. multiple delete hospitalSet
+    @ApiOperation(value = "get hospitalSet by id")
+    @GetMapping("getHospSet/{id}")
+    public Result getHospSet(@PathVariable Long id) {
+        HospitalSet hospitalSet = hospitalSetService.getById(id);
+        return Result.ok(hospitalSet);
+        }
 
+    // 6. update hospitalSet
+        @ApiOperation(value = "update hospitalSet by id")
+    @PostMapping("updateHospitalSet")
+    public Result updateHospitalSet( @RequestBody HospitalSet hospitalSet) {
+
+        // update hospitalSet and return result
+        boolean flag = hospitalSetService.updateById(hospitalSet);
+        if (flag) {
+            return Result.ok();
+        } else {
+            return Result.fail();
+        }
+    }
+
+    // 7. batch remove hospitalSet
+    @ApiOperation(value = "batch remove hospitalSet")
+    @DeleteMapping("batchRemoveHospitalSet")
+    public Result batchRemoveHospitalSet(@RequestBody List<Long> ids) {
+        hospitalSetService.removeByIds(ids);
+            return Result.ok();
+    }
 }
-}
+
