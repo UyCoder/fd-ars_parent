@@ -50,7 +50,7 @@ public class HospitalSetServiceController {
         boolean flag = hospitalSetService.removeById(id);
         if (flag) {
             return Result.ok();
-        }  else {
+        } else {
             return Result.fail();
         }
     }
@@ -92,7 +92,7 @@ public class HospitalSetServiceController {
 
         // encrypt hospitalSet
         Random random = new Random();
-        hospitalSet.setSignKey(MD5.encrypt(System.currentTimeMillis() + ""+ random.nextInt(100)));
+        hospitalSet.setSignKey(MD5.encrypt(System.currentTimeMillis() + "" + random.nextInt(100)));
 
         // save hospitalSet and return result
         boolean flag = hospitalSetService.save(hospitalSet);
@@ -116,12 +116,12 @@ public class HospitalSetServiceController {
 //    }
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         return Result.ok(hospitalSet);
-        }
+    }
 
     // 6. update hospitalSet
-        @ApiOperation(value = "update hospitalSet by id")
+    @ApiOperation(value = "update hospitalSet by id")
     @PostMapping("updateHospitalSet")
-    public Result updateHospitalSet( @RequestBody HospitalSet hospitalSet) {
+    public Result updateHospitalSet(@RequestBody HospitalSet hospitalSet) {
 
         // update hospitalSet and return result
         boolean flag = hospitalSetService.updateById(hospitalSet);
@@ -137,7 +137,7 @@ public class HospitalSetServiceController {
     @DeleteMapping("batchRemoveHospitalSet")
     public Result batchRemoveHospitalSet(@RequestBody List<Long> ids) {
         hospitalSetService.removeByIds(ids);
-            return Result.ok();
+        return Result.ok();
     }
 
 

@@ -19,7 +19,7 @@ import java.util.Map;
  * @author qy
  */
 @Data
-@ApiModel(description = "数据字典")
+@ApiModel(description = "dictionary")
 @TableName("dict")
 public class Dict {
 
@@ -28,41 +28,41 @@ public class Dict {
     @ApiModelProperty(value = "id")
     private Long id;
 
-    @ApiModelProperty(value = "创建时间")
+    @ApiModelProperty(value = "createTime")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @TableField("create_time")
     private Date createTime;
 
-    @ApiModelProperty(value = "更新时间")
+    @ApiModelProperty(value = "updateTime")
     @TableField("update_time")
     private Date updateTime;
 
-    @ApiModelProperty(value = "逻辑删除(1:已删除，0:未删除)")
+    @ApiModelProperty(value = "isDeleted(1:已删除，0:未删除)")
     @TableLogic
     @TableField("is_deleted")
     private Integer isDeleted;
 
-    @ApiModelProperty(value = "其他参数")
+    @ApiModelProperty(value = "params")
     @TableField(exist = false)
     private Map<String,Object> param = new HashMap<>();
 
-    @ApiModelProperty(value = "上级id")
+    @ApiModelProperty(value = "parentId")
     @TableField("parent_id")
     private Long parentId;
 
-    @ApiModelProperty(value = "名称")
+    @ApiModelProperty(value = "name")
     @TableField("name")
     private String name;
 
-    @ApiModelProperty(value = "值")
+    @ApiModelProperty(value = "value")
     @TableField("value")
     private String value;
 
-    @ApiModelProperty(value = "编码")
+    @ApiModelProperty(value = "dictCode")
     @TableField("dict_code")
     private String dictCode;
 
-    @ApiModelProperty(value = "是否包含子节点")
+    @ApiModelProperty(value = "hasChildren")
     @TableField(exist = false)
     private boolean hasChildren;
 

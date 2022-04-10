@@ -1,8 +1,8 @@
 package dev.ahmed.yygh.enums;
 
 public enum PaymentStatusEnum {
-    UNPAID(1,"支付中"),
-    PAID(2,"已支付");
+    UNPAID(1,"Unpaid"),
+    PAID(2,"Paid");
     //REFUND(-1,"已退款");
 
     private Integer status ;

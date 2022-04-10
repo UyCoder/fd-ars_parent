@@ -29,81 +29,81 @@ public class OrderInfo extends BaseEntity {
 	@TableField("user_id")
 	private Long userId;
 
-	@ApiModelProperty(value = "订单交易号")
+	@ApiModelProperty(value = "outTradeNo")
 	@TableField("out_trade_no")
 	private String outTradeNo;
 
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	@TableField("hoscode")
 	private String hoscode;
 
-	@ApiModelProperty(value = "医院名称")
+	@ApiModelProperty(value = "hosname")
 	@TableField("hosname")
 	private String hosname;
 
-	@ApiModelProperty(value = "科室编号")
+	@ApiModelProperty(value = "depcode")
 	@TableField("depcode")
 	private String depcode;
 
-	@ApiModelProperty(value = "科室名称")
+	@ApiModelProperty(value = "depname")
 	@TableField("depname")
 	private String depname;
 
-	@ApiModelProperty(value = "排班id")
+	@ApiModelProperty(value = "scheduleId")
 	@TableField("schedule_id")
 	private String scheduleId;
 
-	@ApiModelProperty(value = "医生职称")
+	@ApiModelProperty(value = "title")
 	@TableField("title")
 	private String title;
 
-	@ApiModelProperty(value = "安排日期")
+	@ApiModelProperty(value = "reserveDate")
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@TableField("reserve_date")
 	private Date reserveDate;
 
-	@ApiModelProperty(value = "安排时间（0：上午 1：下午）")
+	@ApiModelProperty(value = "reserveTime（0：上午 1：下午）")
 	@TableField("reserve_time")
 	private Integer reserveTime;
 
-	@ApiModelProperty(value = "就诊人id")
+	@ApiModelProperty(value = "patientId")
 	@TableField("patient_id")
 	private Long patientId;
 
-	@ApiModelProperty(value = "就诊人名称")
+	@ApiModelProperty(value = "patientName")
 	@TableField("patient_name")
 	private String patientName;
 
-	@ApiModelProperty(value = "就诊人手机")
+	@ApiModelProperty(value = "patientPhone")
 	@TableField("patient_phone")
 	private String patientPhone;
 
-	@ApiModelProperty(value = "预约记录唯一标识（医院预约记录主键）")
+	@ApiModelProperty(value = "hosRecordId（医院预约记录主键）")
 	@TableField("hos_record_id")
 	private String hosRecordId;
 
-	@ApiModelProperty(value = "预约号序")
+	@ApiModelProperty(value = "number")
 	@TableField("number")
 	private Integer number;
 
-	@ApiModelProperty(value = "建议取号时间")
+	@ApiModelProperty(value = "fetchTime")
 	@TableField("fetch_time")
 	private String fetchTime;
 
-	@ApiModelProperty(value = "取号地点")
+	@ApiModelProperty(value = "fetchAddress")
 	@TableField("fetch_address")
 	private String fetchAddress;
 
-	@ApiModelProperty(value = "医事服务费")
+	@ApiModelProperty(value = "amount")
 	@TableField("amount")
 	private BigDecimal amount;
 
-	@ApiModelProperty(value = "退号时间")
+	@ApiModelProperty(value = "quitTime")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
 	@TableField("quit_time")
 	private Date quitTime;
 
-	@ApiModelProperty(value = "订单状态")
+	@ApiModelProperty(value = "orderStatus")
 	@TableField("order_status")
 	private Integer orderStatus;
 

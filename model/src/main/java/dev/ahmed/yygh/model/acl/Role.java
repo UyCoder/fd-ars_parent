@@ -16,17 +16,17 @@ import lombok.Data;
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "角色")
+@ApiModel(description = "role")
 @TableName("acl_role")
 public class Role extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "角色名称")
+	@ApiModelProperty(value = "roleName")
 	@TableField("role_name")
 	private String roleName;
 
-	@ApiModelProperty(value = "备注")
+	@ApiModelProperty(value = "remark")
 	@TableField("remark")
 	private String remark;
 

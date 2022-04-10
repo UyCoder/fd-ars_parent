@@ -1,8 +1,8 @@
 package dev.ahmed.yygh.enums;
 
 public enum RefundStatusEnum {
-    UNREFUND(1,"退款中"),
-    REFUND(2,"已退款");
+    UNREFUND(1,"Unrefund"),
+    REFUND(2,"Refund");
 
     private Integer status ;
 

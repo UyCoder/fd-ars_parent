@@ -23,26 +23,26 @@ import java.util.List;
  * @author qy
  */
 @Data
-@ApiModel(description = "预约规则")
+@ApiModel(description = "BookingRule")
 @Document("BookingRule")
 public class BookingRule {
 	
-	@ApiModelProperty(value = "预约周期")
+	@ApiModelProperty(value = "cycle")
 	private Integer cycle;
 
-	@ApiModelProperty(value = "放号时间")
+	@ApiModelProperty(value = "releaseTime")
 	private String releaseTime;
 
-	@ApiModelProperty(value = "停挂时间")
+	@ApiModelProperty(value = "stopTime")
 	private String stopTime;
 
-	@ApiModelProperty(value = "退号截止天数（如：就诊前一天为-1，当天为0）")
+	@ApiModelProperty(value = "quitDay（如：就诊前一天为-1，当天为0）")
 	private Integer quitDay;
 
-	@ApiModelProperty(value = "退号时间")
+	@ApiModelProperty(value = "quitTime")
 	private String quitTime;
 
-	@ApiModelProperty(value = "预约规则")
+	@ApiModelProperty(value = "rule")
 	private List<String> rule;
 
 	/**

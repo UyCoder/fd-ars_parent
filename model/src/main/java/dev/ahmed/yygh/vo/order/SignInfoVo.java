@@ -17,15 +17,15 @@ import java.io.Serializable;
  * @author qy
  */
 @Data
-@ApiModel(description = "签名信息")
+@ApiModel(description = "SignInfo")
 public class SignInfoVo  implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "api基础路径")
+	@ApiModelProperty(value = "apiUrl")
 	private String apiUrl;
 
-	@ApiModelProperty(value = "签名秘钥")
+	@ApiModelProperty(value = "signKey")
 	private String signKey;
 
 }

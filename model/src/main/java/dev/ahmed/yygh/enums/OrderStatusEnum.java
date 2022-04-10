@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 public enum OrderStatusEnum {
-    UNPAID(0,"预约成功，待支付"),
-    PAID(1,"已支付" ),
-    GET_NUMBER(2,"已取号" ),
-    CANCLE(-1,"取消预约"),
+    UNPAID(0,"Registration success，wating for payment"),
+    PAID(1,"Paid" ),
+    GET_NUMBER(2,"Get number" ),
+    CANCLE(-1,"Cancle" );
     ;
 
     private Integer status;

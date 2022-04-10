@@ -1,8 +1,8 @@
 package dev.ahmed.yygh.enums;
 
 public enum PaymentTypeEnum {
-    ALIPAY(1,"支付宝"),
-    WEIXIN(2,"微信" );
+    ALIPAY(1,"AliPay"),
+    WEIXIN(2,"Wexin" );
 
     public Integer getStatus() {
         return status;

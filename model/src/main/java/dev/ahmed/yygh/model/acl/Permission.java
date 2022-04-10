@@ -18,29 +18,29 @@ import java.util.List;
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "权限")
+@ApiModel(description = "Permission")
 @TableName("acl_permission")
 public class Permission extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "所属上级")
+	@ApiModelProperty(value = "pid")
 	@TableField("pid")
 	private Long pid;
 
-	@ApiModelProperty(value = "名称")
+	@ApiModelProperty(value = "name")
 	@TableField("name")
 	private String name;
 
-	@ApiModelProperty(value = "类型(1:菜单,2:按钮)")
+	@ApiModelProperty(value = "type(1:菜单,2:按钮)")
 	@TableField("type")
 	private Integer type;
 
-	@ApiModelProperty(value = "权限值")
+	@ApiModelProperty(value = "permissionValue")
 	@TableField("permission_value")
 	private String permissionValue;
 
-	@ApiModelProperty(value = "路径")
+	@ApiModelProperty(value = "path")
 	@TableField("path")
 	private String path;
 
@@ -48,23 +48,23 @@ public class Permission extends BaseEntity {
 	@TableField("component")
 	private String component;
 
-	@ApiModelProperty(value = "图标")
+	@ApiModelProperty(value = "icon")
 	@TableField("icon")
 	private String icon;
 
-	@ApiModelProperty(value = "状态(0:禁止,1:正常)")
+	@ApiModelProperty(value = "status(0:禁止,1:正常)")
 	@TableField("status")
 	private Integer status;
 
-	@ApiModelProperty(value = "层级")
+	@ApiModelProperty(value = "level")
 	@TableField(exist = false)
 	private Integer level;
 
-	@ApiModelProperty(value = "下级")
+	@ApiModelProperty(value = "children")
 	@TableField(exist = false)
 	private List<Permission> children;
 
-	@ApiModelProperty(value = "是否选中")
+	@ApiModelProperty(value = "isSelected")
 	@TableField(exist = false)
 	private boolean isSelect;
 

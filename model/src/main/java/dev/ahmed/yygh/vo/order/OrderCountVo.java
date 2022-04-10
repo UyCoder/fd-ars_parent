@@ -8,10 +8,10 @@ import lombok.Data;
 @ApiModel(description = "OrderCountVo")
 public class OrderCountVo {
 	
-	@ApiModelProperty(value = "安排日期")
+	@ApiModelProperty(value = "reserveDate")
 	private String reserveDate;
 
-	@ApiModelProperty(value = "预约单数")
+	@ApiModelProperty(value = "count")
 	private Integer count;
 
 }

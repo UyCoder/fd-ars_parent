@@ -8,22 +8,22 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 用户查询实体
+ * UserQueryVo
  * </p>
  *
  * @author qy
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "用户查询实体")
+@ApiModel(description = "user query vo")
 public class UserQueryVo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "用户名")
+	@ApiModelProperty(value = "username")
 	private String username;
 
-	@ApiModelProperty(value = "昵称")
+	@ApiModelProperty(value = "nickName")
 	private String nickName;
 
 }

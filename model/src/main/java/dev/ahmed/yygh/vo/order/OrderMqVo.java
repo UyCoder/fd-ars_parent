@@ -11,16 +11,16 @@ import java.util.Date;
 @ApiModel(description = "OrderMqVo")
 public class OrderMqVo {
 
-	@ApiModelProperty(value = "可预约数")
+	@ApiModelProperty(value = "reservedNumber")
 	private Integer reservedNumber;
 
-	@ApiModelProperty(value = "剩余预约数")
+	@ApiModelProperty(value = "availableNumber")
 	private Integer availableNumber;
 
-	@ApiModelProperty(value = "排班id")
+	@ApiModelProperty(value = "scheduleId")
 	private String scheduleId;
 
-	@ApiModelProperty(value = "短信实体")
+	@ApiModelProperty(value = "msmVo")
 	private MsmVo msmVo;
 
 }

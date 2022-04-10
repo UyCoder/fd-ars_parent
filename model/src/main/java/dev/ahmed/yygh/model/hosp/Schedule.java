@@ -28,43 +28,43 @@ public class Schedule extends BaseMongoEntity {
 	
 	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	@Indexed //普通索引
 	private String hoscode;
 
-	@ApiModelProperty(value = "科室编号")
+	@ApiModelProperty(value = "depcode")
 	@Indexed //普通索引
 	private String depcode;
 
-	@ApiModelProperty(value = "职称")
+	@ApiModelProperty(value = "title")
 	private String title;
 
-	@ApiModelProperty(value = "医生名称")
+	@ApiModelProperty(value = "docname")
 	private String docname;
 
-	@ApiModelProperty(value = "擅长技能")
+	@ApiModelProperty(value = "skill")
 	private String skill;
 
-	@ApiModelProperty(value = "排班日期")
+	@ApiModelProperty(value = "workDate")
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date workDate;
 
-	@ApiModelProperty(value = "排班时间（0：上午 1：下午）")
+	@ApiModelProperty(value = "workTime（0：上午 1：下午）")
 	private Integer workTime;
 
-	@ApiModelProperty(value = "可预约数")
+	@ApiModelProperty(value = "reservedNumber")
 	private Integer reservedNumber;
 
-	@ApiModelProperty(value = "剩余预约数")
+	@ApiModelProperty(value = "availableNumber")
 	private Integer availableNumber;
 
-	@ApiModelProperty(value = "挂号费")
+	@ApiModelProperty(value = "amount")
 	private BigDecimal amount;
 
-	@ApiModelProperty(value = "排班状态（-1：停诊 0：停约 1：可约）")
+	@ApiModelProperty(value = "status（-1：停诊 0：停约 1：可约）")
 	private Integer status;
 
-	@ApiModelProperty(value = "排班编号（医院自己的排班主键）")
+	@ApiModelProperty(value = "hosScheduleId（医院自己的排班主键）")
 	@Indexed //普通索引
 	private String hosScheduleId;
 

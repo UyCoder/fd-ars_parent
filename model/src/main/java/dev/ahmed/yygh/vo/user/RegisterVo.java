@@ -5,15 +5,15 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="注册对象")
+@ApiModel(description="RegisterVo")
 public class RegisterVo {
 
-    @ApiModelProperty(value = "手机号")
+    @ApiModelProperty(value = "mobile")
     private String mobile;
 
-    @ApiModelProperty(value = "密码")
+    @ApiModelProperty(value = "password")
     private String password;
 
-    @ApiModelProperty(value = "验证码")
+    @ApiModelProperty(value = "code")
     private String code;
 }

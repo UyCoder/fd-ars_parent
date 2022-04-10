@@ -12,46 +12,46 @@ import java.util.Date;
 @ApiModel(description = "Schedule")
 public class ScheduleOrderVo {
 
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	private String hoscode;
 
-	@ApiModelProperty(value = "医院名称")
+	@ApiModelProperty(value = "hosname")
 	private String hosname;
 
-	@ApiModelProperty(value = "科室编号")
+	@ApiModelProperty(value = "depcode")
 	private String depcode;
 
-	@ApiModelProperty(value = "科室名称")
+	@ApiModelProperty(value = "depname")
 	private String depname;
 
-	@ApiModelProperty(value = "排班编号（医院自己的排班主键）")
+	@ApiModelProperty(value = "hosScheduleId（医院自己的排班主键）")
 	private String hosScheduleId;
 
-	@ApiModelProperty(value = "医生职称")
+	@ApiModelProperty(value = "title")
 	private String title;
 
-	@ApiModelProperty(value = "安排日期")
+	@ApiModelProperty(value = "reserveDate")
 	private Date reserveDate;
 
-	@ApiModelProperty(value = "剩余预约数")
+	@ApiModelProperty(value = "availableNumber")
 	private Integer availableNumber;
 
-	@ApiModelProperty(value = "安排时间（0：上午 1：下午）")
+	@ApiModelProperty(value = "reserveTime（0：上午 1：下午）")
 	private Integer reserveTime;
 
-	@ApiModelProperty(value = "医事服务费")
+	@ApiModelProperty(value = "amount")
 	private BigDecimal amount;
 
-	@ApiModelProperty(value = "退号时间")
+	@ApiModelProperty(value = "quitTime")
 	private Date quitTime;
 
-	@ApiModelProperty(value = "挂号开始时间")
+	@ApiModelProperty(value = "startTime")
 	private Date startTime;
 
-	@ApiModelProperty(value = "挂号结束时间")
+	@ApiModelProperty(value = "endTime")
 	private Date endTime;
 
-	@ApiModelProperty(value = "当天停止挂号时间")
+	@ApiModelProperty(value = "stopTime")
 	private Date stopTime;
 }
 

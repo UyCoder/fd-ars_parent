@@ -8,13 +8,13 @@ import lombok.Data;
 @ApiModel(description = "OrderCountQueryVo")
 public class OrderCountQueryVo {
 	
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	private String hoscode;
 
-	@ApiModelProperty(value = "医院名称")
+	@ApiModelProperty(value = "hosname")
 	private String hosname;
 
-	@ApiModelProperty(value = "安排日期")
+	@ApiModelProperty(value = "reserveDate")
 	private String reserveDateBegin;
 	private String reserveDateEnd;
 

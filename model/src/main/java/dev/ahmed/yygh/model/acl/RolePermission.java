@@ -16,7 +16,7 @@ import lombok.Data;
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "角色权限")
+@ApiModel(description = "Role permission")
 @TableName("acl_role_permission")
 public class RolePermission extends BaseEntity {
 	

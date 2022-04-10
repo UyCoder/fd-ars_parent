@@ -8,19 +8,19 @@ import lombok.Data;
 @ApiModel(description = "Department")
 public class DepartmentQueryVo {
 	
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	private String hoscode;
 
-	@ApiModelProperty(value = "科室编号")
+	@ApiModelProperty(value = "depcode")
 	private String depcode;
 
-	@ApiModelProperty(value = "科室名称")
+	@ApiModelProperty(value = "depname")
 	private String depname;
 
-	@ApiModelProperty(value = "大科室编号")
+	@ApiModelProperty(value = "bigcode")
 	private String bigcode;
 
-	@ApiModelProperty(value = "大科室名称")
+	@ApiModelProperty(value = "bigname")
 	private String bigname;
 
 }

@@ -8,19 +8,19 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 角色查询实体
+ * RoleQueryVo
  * </p>
  *
  * @author qy
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "角色查询实体")
+@ApiModel(description = "Role Quiery")
 public class RoleQueryVo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "角色名称")
+	@ApiModelProperty(value = "roleName")
 	private String roleName;
 
 }

@@ -5,22 +5,22 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="会员搜索对象")
+@ApiModel(description="UserInfoQueryVo")
 public class UserInfoQueryVo {
 
-    @ApiModelProperty(value = "关键字")
+    @ApiModelProperty(value = "keyword")
     private String keyword;
 
-    @ApiModelProperty(value = "状态")
+    @ApiModelProperty(value = "status")
     private Integer status;
 
-    @ApiModelProperty(value = "认证状态")
+    @ApiModelProperty(value = "authStatus")
     private Integer authStatus;
 
-    @ApiModelProperty(value = "创建时间")
+    @ApiModelProperty(value = "createTimeBegin")
     private String createTimeBegin;
 
-    @ApiModelProperty(value = "创建时间")
+    @ApiModelProperty(value = "createTimeEnd")
     private String createTimeEnd;
 
 }

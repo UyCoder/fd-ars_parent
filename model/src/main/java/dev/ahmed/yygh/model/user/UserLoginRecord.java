@@ -15,13 +15,13 @@ import lombok.Data;
  * @author qy
  */
 @Data
-@ApiModel(description = "用户登录日志")
+@ApiModel(description = "userLoginRecord")
 @TableName("user_login_record")
 public class UserLoginRecord extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "用户id")
+	@ApiModelProperty(value = "userId")
 	@TableField("user_id")
 	private Long userId;
 

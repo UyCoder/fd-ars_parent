@@ -24,39 +24,39 @@ public class PaymentInfo extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "对外业务编号")
+	@ApiModelProperty(value = "outTradeNo")
 	@TableField("out_trade_no")
 	private String outTradeNo;
 
-	@ApiModelProperty(value = "订单编号")
+	@ApiModelProperty(value = "orderId")
 	@TableField("order_id")
 	private Long orderId;
 
-	@ApiModelProperty(value = "支付类型（微信 支付宝）")
+	@ApiModelProperty(value = "paymentType")
 	@TableField("payment_type")
 	private Integer paymentType;
 
-	@ApiModelProperty(value = "交易编号")
+	@ApiModelProperty(value = "tradeNo")
 	@TableField("trade_no")
 	private String tradeNo;
 
-	@ApiModelProperty(value = "支付金额")
+	@ApiModelProperty(value = "totalAmount")
 	@TableField("total_amount")
 	private BigDecimal totalAmount;
 
-	@ApiModelProperty(value = "交易内容")
+	@ApiModelProperty(value = "subject")
 	@TableField("subject")
 	private String subject;
 
-	@ApiModelProperty(value = "支付状态")
+	@ApiModelProperty(value = "paymentStatus")
 	@TableField("payment_status")
 	private Integer paymentStatus;
 
-	@ApiModelProperty(value = "回调时间")
+	@ApiModelProperty(value = "callbackTime")
 	@TableField("callback_time")
 	private Date callbackTime;
 
-	@ApiModelProperty(value = "回调信息")
+	@ApiModelProperty(value = "callbackContent")
 	@TableField("callback_content")
 	private String callbackContent;
 

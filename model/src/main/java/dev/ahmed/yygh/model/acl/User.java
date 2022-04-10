@@ -16,29 +16,29 @@ import lombok.Data;
  * @since 2019-11-08
  */
 @Data
-@ApiModel(description = "用户")
+@ApiModel(description = "user")
 @TableName("acl_user")
 public class User extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "用户名")
+	@ApiModelProperty(value = "username")
 	@TableField("username")
 	private String username;
 
-	@ApiModelProperty(value = "密码")
+	@ApiModelProperty(value = "password")
 	@TableField("password")
 	private String password;
 
-	@ApiModelProperty(value = "昵称")
+	@ApiModelProperty(value = "nickName")
 	@TableField("nick_name")
 	private String nickName;
 
-	@ApiModelProperty(value = "用户头像")
+	@ApiModelProperty(value = "salt")
 	@TableField("salt")
 	private String salt;
 
-	@ApiModelProperty(value = "用户签名")
+	@ApiModelProperty(value = "token")
 	@TableField("token")
 	private String token;
 

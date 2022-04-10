@@ -12,25 +12,25 @@ public class HospitalQueryVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "医院编号")
+	@ApiModelProperty(value = "hoscode")
 	private String hoscode;
 
-	@ApiModelProperty(value = "医院名称")
+	@ApiModelProperty(value = "hosname")
 	private String hosname;
 
-	@ApiModelProperty(value = "医院类型")
+	@ApiModelProperty(value = "hostype")
 	private String hostype;
 
-	@ApiModelProperty(value = "省code")
+	@ApiModelProperty(value = "provinceCode")
 	private String provinceCode;
 
-	@ApiModelProperty(value = "市code")
+	@ApiModelProperty(value = "cityCode")
 	private String cityCode;
 
-	@ApiModelProperty(value = "区code")
+	@ApiModelProperty(value = "districtCode")
 	private String districtCode;
 
-	@ApiModelProperty(value = "状态")
+	@ApiModelProperty(value = "status")
 	private Integer status;
 }
 

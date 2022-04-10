@@ -2,10 +2,10 @@ package dev.ahmed.yygh.enums;
 
 public enum AuthStatusEnum {
 
-    NO_AUTH(0, "未认证"),
-    AUTH_RUN(1, "认证中"),
-    AUTH_SUCCESS(2, "认证成功"),
-    AUTH_FAIL(-1, "认证失败"),
+    NO_AUTH(0, "No Auth"),
+    AUTH_RUN(1, "Auth Run"),
+    AUTH_SUCCESS(2, "Auth Success"),
+    AUTH_FAIL(-1, "Auth Fail");
     ;
 
     private Integer status;

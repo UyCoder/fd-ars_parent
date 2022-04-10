@@ -25,43 +25,43 @@ public class Hospital extends BaseMongoEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "医院编号")
-	@Indexed(unique = true) //唯一索引
+	@ApiModelProperty(value = "hoscode")
+	@Indexed(unique = true) // unique
 	private String hoscode;
 
-	@ApiModelProperty(value = "医院名称")
-	@Indexed //普通索引
+	@ApiModelProperty(value = "hosname")
+	@Indexed
 	private String hosname;
 
-	@ApiModelProperty(value = "医院类型")
+	@ApiModelProperty(value = "hostype")
 	private String hostype;
 
-	@ApiModelProperty(value = "省code")
+	@ApiModelProperty(value = "provinceCode")
 	private String provinceCode;
 
-	@ApiModelProperty(value = "市code")
+	@ApiModelProperty(value = "cityCode")
 	private String cityCode;
 
-	@ApiModelProperty(value = "区code")
+	@ApiModelProperty(value = "districtCode")
 	private String districtCode;
 
-	@ApiModelProperty(value = "详情地址")
+	@ApiModelProperty(value = "address")
 	private String address;
 
-	@ApiModelProperty(value = "医院logo")
+	@ApiModelProperty(value = "logoData")
 	private String logoData;
 
-	@ApiModelProperty(value = "医院简介")
+	@ApiModelProperty(value = "intro")
 	private String intro;
 
-	@ApiModelProperty(value = "坐车路线")
+	@ApiModelProperty(value = "route")
 	private String route;
 
-	@ApiModelProperty(value = "状态 0：未上线 1：已上线")
+	@ApiModelProperty(value = "status 0：未上线 1：已上线")
 	private Integer status;
 
 	//预约规则
-	@ApiModelProperty(value = "预约规则")
+	@ApiModelProperty(value = "bookingRule")
 	private BookingRule bookingRule;
 
 	public void setBookingRule(String bookingRule) {

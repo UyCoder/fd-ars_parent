@@ -6,22 +6,22 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="会员认证对象")
+@ApiModel(description="UserAuthVo")
 public class UserAuthVo {
 
-    @ApiModelProperty(value = "用户姓名")
+    @ApiModelProperty(value = "name")
     @TableField("name")
     private String name;
 
-    @ApiModelProperty(value = "证件类型")
+    @ApiModelProperty(value = "certificatesType")
     @TableField("certificates_type")
     private String certificatesType;
 
-    @ApiModelProperty(value = "证件编号")
+    @ApiModelProperty(value = "certificatesNo")
     @TableField("certificates_no")
     private String certificatesNo;
 
-    @ApiModelProperty(value = "证件路径")
+    @ApiModelProperty(value = "certificatesUrl")
     @TableField("certificates_url")
     private String certificatesUrl;
 

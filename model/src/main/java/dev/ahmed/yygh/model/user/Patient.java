@@ -24,80 +24,80 @@ public class Patient extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ApiModelProperty(value = "用户id")
+	@ApiModelProperty(value = "userId")
 	@TableField("user_id")
 	private Long userId;
 
-	@ApiModelProperty(value = "姓名")
+	@ApiModelProperty(value = "name")
 	@TableField("name")
 	private String name;
 
-	@ApiModelProperty(value = "证件类型")
+	@ApiModelProperty(value = "certificatesType")
 	@TableField("certificates_type")
 	private String certificatesType;
 
-	@ApiModelProperty(value = "证件编号")
+	@ApiModelProperty(value = "certificatesNo")
 	@TableField("certificates_no")
 	private String certificatesNo;
 
-	@ApiModelProperty(value = "性别")
+	@ApiModelProperty(value = "sex")
 	@TableField("sex")
 	private Integer sex;
 
-	@ApiModelProperty(value = "出生年月")
+	@ApiModelProperty(value = "birthdate")
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@TableField("birthdate")
 	private Date birthdate;
 
-	@ApiModelProperty(value = "手机")
+	@ApiModelProperty(value = "phone")
 	@TableField("phone")
 	private String phone;
 
-	@ApiModelProperty(value = "是否结婚")
+	@ApiModelProperty(value = "isMarry")
 	@TableField("is_marry")
 	private Integer isMarry;
 
-	@ApiModelProperty(value = "省code")
+	@ApiModelProperty(value = "provinceCode")
 	@TableField("province_code")
 	private String provinceCode;
 
-	@ApiModelProperty(value = "市code")
+	@ApiModelProperty(value = "cityCode")
 	@TableField("city_code")
 	private String cityCode;
 
-	@ApiModelProperty(value = "区code")
+	@ApiModelProperty(value = "districtCode")
 	@TableField("district_code")
 	private String districtCode;
 
-	@ApiModelProperty(value = "详情地址")
+	@ApiModelProperty(value = "address")
 	@TableField("address")
 	private String address;
 
-	@ApiModelProperty(value = "联系人姓名")
+	@ApiModelProperty(value = "contactsName")
 	@TableField("contacts_name")
 	private String contactsName;
 
-	@ApiModelProperty(value = "联系人证件类型")
+	@ApiModelProperty(value = "contactsCertificatesType")
 	@TableField("contacts_certificates_type")
 	private String contactsCertificatesType;
 
-	@ApiModelProperty(value = "联系人证件号")
+	@ApiModelProperty(value = "contactsCertificatesNo")
 	@TableField("contacts_certificates_no")
 	private String contactsCertificatesNo;
 
-	@ApiModelProperty(value = "联系人手机")
+	@ApiModelProperty(value = "contactsPhone")
 	@TableField("contacts_phone")
 	private String contactsPhone;
 
-	@ApiModelProperty(value = "是否有医保")
+	@ApiModelProperty(value = "isInsure")
 	@TableField("is_insure")
 	private Integer isInsure;
 
-	@ApiModelProperty(value = "就诊卡")
+	@ApiModelProperty(value = "cardNo")
 	@TableField("card_no")
 	private String cardNo;
 
-	@ApiModelProperty(value = "状态（0：默认 1：已认证）")
+	@ApiModelProperty(value = "status（0：默认 1：已认证）")
 	@TableField("status")
 	private String status;
 }

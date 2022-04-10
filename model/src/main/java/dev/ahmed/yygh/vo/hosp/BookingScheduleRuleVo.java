@@ -18,30 +18,30 @@ import java.util.Date;
  * @author qy
  */
 @Data
-@ApiModel(description = "可预约排班规则数据")
+@ApiModel(description = "BookingScheduleRuleVo")
 public class BookingScheduleRuleVo {
 	
-	@ApiModelProperty(value = "可预约日期")
+	@ApiModelProperty(value = "workDate")
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date workDate;
 
-	@ApiModelProperty(value = "可预约日期")
+	@ApiModelProperty(value = "workDateMd")
 	@JsonFormat(pattern = "MM月dd日")
 	private Date workDateMd; //方便页面使用
 
-	@ApiModelProperty(value = "周几")
+	@ApiModelProperty(value = "dayOfWeek")
 	private String dayOfWeek;
 
-	@ApiModelProperty(value = "就诊医生人数")
+	@ApiModelProperty(value = "docCount")
 	private Integer docCount;
 
-	@ApiModelProperty(value = "科室可预约数")
+	@ApiModelProperty(value = "reservedNumber")
 	private Integer reservedNumber;
 
-	@ApiModelProperty(value = "科室剩余预约数")
+	@ApiModelProperty(value = "availableNumber")
 	private Integer availableNumber;
 
-	@ApiModelProperty(value = "状态 0：正常 1：即将放号 -1：当天已停止挂号")
+	@ApiModelProperty(value = "status 0：正常 1：即将放号 -1：当天已停止挂号")
 	private Integer status;
 }
 
