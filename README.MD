@@ -69,6 +69,10 @@ The online appointment and registration service could solves this medical proble
 
 
 
+0000\000\\
 
+https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_ODQxNmExYzAtOWNiNS00YjAxLThkMWQtNGZhNjQ3YjdkNWI5%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%252268283f3b-8487-4c86-adb3-a5228f18b893%2522%252c%2522Oid%2522%253a%252222e25672-1888-4378-bad1-347047462ecf%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=3757dc14-7786-467f-aec7-4dc2c4ec7fc4&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
+
+------
 
 
