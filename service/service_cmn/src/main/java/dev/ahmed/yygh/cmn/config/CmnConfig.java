@@ -1,4 +1,4 @@
-package dev.ahmed.yygh.hosp.config;
+package dev.ahmed.yygh.cmn.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,8 +11,9 @@ import org.springframework.context.annotation.Configuration;
  * @CreatedWith: IntelliJ IDEA
  */
 @Configuration
-@MapperScan("dev.ahmed.yygh.hosp.mapper")
-public class HospConfig {
+@MapperScan("dev.ahmed.yygh.cmn.mapper")
+public class CmnConfig {
+
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();

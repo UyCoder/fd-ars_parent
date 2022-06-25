@@ -8,6 +8,7 @@
         <module>common/common_util</module>
         <module>model</module>
         <module>service</module>
+        <module>service/service_cmn</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -9,28 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <version>1.0</version>
-    <artifactId>service_hospital</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>service_cmn</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <dependencies>
-
-    </dependencies>
-
-    <build>
-        <finalName>service-hosp</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 
 </project>
