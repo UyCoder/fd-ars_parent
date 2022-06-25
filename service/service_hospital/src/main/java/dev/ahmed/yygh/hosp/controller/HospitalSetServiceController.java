@@ -28,6 +28,7 @@ import java.util.Random;
 @Api(tags = "HospitalSetController")
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospitalSetServiceController {
     @Autowired
     private HospitalSetService hospitalSetService;
