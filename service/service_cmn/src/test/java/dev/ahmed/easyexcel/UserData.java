@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 public class UserData {
 
-    @ExcelProperty("User ID")
+    @ExcelProperty(value = "User ID", index = 0)
     private int uid;
 
-    @ExcelProperty("User Name")
+    @ExcelProperty(value = "User Name", index = 1)
     private String username;
 }
