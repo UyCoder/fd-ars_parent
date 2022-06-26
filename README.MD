@@ -59,10 +59,10 @@ The online appointment and registration service could solves this medical proble
 - Jenkins
 
 # 4. Business Process
-![](./PicsForReadmeFile/01.png)
+
 
 # 5. Service Architecture
-![](./PicsForReadmeFile/02.png)
+
 
 
 
