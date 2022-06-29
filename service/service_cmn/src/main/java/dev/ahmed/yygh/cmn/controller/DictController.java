@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Api(tags = "Dictionary Controller")
@@ -18,6 +19,15 @@ public class DictController {
 
     @Autowired
     private DictService dictService;
+
+
+    // export data
+    @GetMapping("/exportData")
+    public void exportDict(HttpServletResponse response) {
+         dictService.exportDictData(response);
+    }
+
+
 
     // search child data with id
     @ApiOperation(value = "search child data with id")
