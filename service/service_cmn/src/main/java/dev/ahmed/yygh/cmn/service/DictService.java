@@ -5,6 +5,7 @@ import dev.ahmed.yygh.cmn.controller.DictController;
 import dev.ahmed.yygh.cmn.mapper.DictMapper;
 import dev.ahmed.yygh.model.cmn.Dict;
 import dev.ahmed.yygh.model.hosp.HospitalSet;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
@@ -18,9 +19,10 @@ import java.util.List;
 public interface DictService extends IService<Dict> {
     List<Dict> findChildData(Long id);
 
+     // export dict data
+     void exportDictData(HttpServletResponse response);
 
- void exportDictData(HttpServletResponse response);
-
-
+     // import dict data
+     void importDictData(MultipartFile file);
 }
 
