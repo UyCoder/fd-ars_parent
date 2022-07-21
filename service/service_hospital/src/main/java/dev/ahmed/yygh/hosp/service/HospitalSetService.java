@@ -9,4 +9,7 @@ import dev.ahmed.yygh.model.hosp.HospitalSet;
  * @CreatedWith: IntelliJ IDEA
  */
 public interface HospitalSetService extends IService<HospitalSet> {
+
+    // 2. search hospital by hoscode then get sign
+    String getSignKey(String hoscode);
 }
