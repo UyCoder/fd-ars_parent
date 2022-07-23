@@ -55,7 +55,6 @@ public class ApiController {
         scheduleService.remove(hoscode, hosScheduleId);
         return Result.ok();
 
-
     }
 
 
@@ -77,7 +76,7 @@ public class ApiController {
         int page = StringUtils.isEmpty((CharSequence) paramMap.get("page"))?1:Integer.parseInt((String) paramMap.get("page"));
         int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit"))?1:Integer.parseInt((String) paramMap.get("limit"));
 
-        // TODO check hoscode
+        // TODO check sign
 
         ScheduleQueryVo scheduleQueryVo = new ScheduleQueryVo();
         scheduleQueryVo.setHoscode(hoscode);
@@ -113,7 +112,7 @@ public class ApiController {
         String hoscode = (String) paramMap.get("hoscode");
         String depcode = (String) paramMap.get("depcode");
 
-        // TODO check hoscode and depcode
+        // TODO check sign
         departmentService.remove(hoscode, depcode);
         return Result.ok();
     }
@@ -130,7 +129,7 @@ public class ApiController {
         int page = StringUtils.isEmpty((CharSequence) paramMap.get("page"))?1:Integer.parseInt((String) paramMap.get("page"));
         int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit"))?1:Integer.parseInt((String) paramMap.get("limit"));
 
-        // TODO check hoscode
+        // TODO check sign
 
         DepartmentQueryVo departmentQueryVo = new DepartmentQueryVo();
         departmentQueryVo.setHoscode(hoscode);
@@ -215,6 +214,4 @@ public class ApiController {
         hospitalService.save(paramMap);
         return Result.ok();
     }
-
-
 }
