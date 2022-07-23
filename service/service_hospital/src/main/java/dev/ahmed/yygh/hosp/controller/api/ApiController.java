@@ -10,9 +10,12 @@ import dev.ahmed.yygh.common.utils.MD5;
 import dev.ahmed.yygh.hosp.service.DepartmentService;
 import dev.ahmed.yygh.hosp.service.HospitalService;
 import dev.ahmed.yygh.hosp.service.HospitalSetService;
+import dev.ahmed.yygh.hosp.service.ScheduleService;
 import dev.ahmed.yygh.model.hosp.Department;
 import dev.ahmed.yygh.model.hosp.Hospital;
+import dev.ahmed.yygh.model.hosp.Schedule;
 import dev.ahmed.yygh.vo.hosp.DepartmentQueryVo;
+import dev.ahmed.yygh.vo.hosp.ScheduleQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,6 +35,73 @@ public class ApiController {
 
     @Autowired
     private DepartmentService departmentService;
+
+    @Autowired
+    private ScheduleService scheduleService;
+
+
+    // delete schedule remove
+    @PostMapping("/schedule/remove")
+    public Result remove(HttpServletRequest request) {
+        // get hospital data
+        Map<String, String[]> requestMap = request.getParameterMap();
+        Map<String, Object> paramMap = HttpRequestHelper.switchMap(requestMap);
+        // get hoscode and hosScheduleId
+        String hoscode = (String) paramMap.get("hoscode");
+        String hosScheduleId = (String) paramMap.get("hosScheduleId");
+
+        //TODO: check sign
+
+        scheduleService.remove(hoscode, hosScheduleId);
+        return Result.ok();
+
+
+    }
+
+
+
+
+
+    // schedule list api
+    @PostMapping("/schedule/list")
+    public Result findSchedule(HttpServletRequest request) {
+        // get hospital data
+        Map<String, String[]> requestMap = request.getParameterMap();
+        Map<String, Object> paramMap = HttpRequestHelper.switchMap(requestMap);
+
+        //hoscode and depcode
+        String hoscode = (String) paramMap.get("hoscode");
+        String depcode = (String) paramMap.get("depcode");
+
+        // page and limit
+        int page = StringUtils.isEmpty((CharSequence) paramMap.get("page"))?1:Integer.parseInt((String) paramMap.get("page"));
+        int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit"))?1:Integer.parseInt((String) paramMap.get("limit"));
+
+        // TODO check hoscode
+
+        ScheduleQueryVo scheduleQueryVo = new ScheduleQueryVo();
+        scheduleQueryVo.setHoscode(hoscode);
+        scheduleQueryVo.setDepcode(depcode);
+
+        // use method from service
+        Page<Schedule> pageModel = scheduleService.findPageSchedule(page, limit, scheduleQueryVo);
+        return Result.ok(pageModel);
+    }
+
+
+    // save schedule api
+    @PostMapping("/saveSchedule")
+    public Result saveSchedule(HttpServletRequest request) {
+        // get hospital data
+        Map<String, String[]> requestMap = request.getParameterMap();
+        Map<String, Object> paramMap = HttpRequestHelper.switchMap(requestMap);
+        // TODO check sign
+
+        scheduleService.save(paramMap);
+        return Result.ok();
+
+    }
+
 
     // remove department
     @PostMapping("/department/remove")
