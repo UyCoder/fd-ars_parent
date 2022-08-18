@@ -16,7 +16,7 @@
     ·
     <a href="https://github.com/165-Softtech-Patika-Java-Spring/bitirmeprojesi-UyCoder/blob/main/BitirmeProjesiHazirlikDokumani.pdf">Project Prapration Doc</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">View Demo</a>
+    <a href="https://github.com/165-Softtech-Patika-Java-Spring/bitirmeprojesi-UyCoder/blob/main/BitirmeProjesiTalepleri.md">View Demo</a>
   </p>
 </div>
 
@@ -46,6 +46,7 @@ The online appointment and registration service could solves this medical proble
 - Lombok
 - Mysql
 - MongoDB
+- nacos
 ### Front-end technologies
 - Vue.js
 - Node.js
@@ -63,6 +64,16 @@ The online appointment and registration service could solves this medical proble
 
 # 5. Service Architecture
 
+
+# 6. Run redis on linux commands
+```shell
+redis-server  /home/kali/Desktop/redis.conf 
+
+sudo docker exec -it mymongo /bin/bash 
+>>> mongo
+
+redis-cli
+```
 
 
 

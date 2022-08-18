@@ -69,15 +69,15 @@
 <!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
 <!--        </dependency>-->
 <!--        &lt;!&ndash; 服务注册 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; 流量控制 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
-<!--        </dependency>-->
+  <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+ </dependency>
+<!--&lt;!&ndash;        &lt;!&ndash; 流量控制 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>-->
+<!--&lt;!&ndash;            <groupId>com.alibaba.cloud</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
     </dependencies>
     <build>
         <plugins>
