@@ -1,6 +1,7 @@
 package dev.ahmed.yygh.cmn.service.impl;
 
 import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import dev.ahmed.yygh.cmn.controller.DictController;
@@ -89,6 +90,32 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         }
 
 
+    }
+
+    @Override
+    public String getDictName(String dictCode, String value) {
+        // if dictCode is null, return value
+        if (StringUtils.isEmpty(dictCode)) {
+            QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+            wrapper.eq("value", value);
+            Dict dict = baseMapper.selectOne(wrapper);
+            return dict.getName();
+        } else {
+            Dict Codedict =this.getDictByCode(dictCode);
+            Long parent_id = Codedict.getId();
+            Dict findDict = baseMapper.selectOne(new QueryWrapper<Dict>()
+                    .eq("parent_id", parent_id)
+                    .eq("value", value));
+            return findDict.getName();
+        }
+
+    }
+
+    private Dict getDictByCode(String dictCode) {
+        QueryWrapper<Dict> wrapper = new QueryWrapper<>();
+        wrapper.eq("dict_code", dictCode);
+        Dict codeDict = baseMapper.selectOne(wrapper);
+        return codeDict;
     }
 
     // booleadn has child data

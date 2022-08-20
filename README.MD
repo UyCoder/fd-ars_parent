@@ -78,7 +78,7 @@ sudo docker exec -it mymongo /bin/bash
 redis-server  /home/kali/Desktop/redis.conf 
 redis-cli
 ```
-### 5) Run the app on intellij
+### 5) Run the microservices on intellij
 - ServiceHospAppication
 - ServiceCmnApplicagion
 - ManageApplication
