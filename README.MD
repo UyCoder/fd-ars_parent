@@ -65,15 +65,26 @@ The online appointment and registration service could solves this medical proble
 # 5. Service Architecture
 
 
-# 6. Run redis on linux commands
+# 6. Run the whole project 
+### 1) Run MySQL
+### 2) Run MongoDB
 ```shell
-redis-server  /home/kali/Desktop/redis.conf 
-
 sudo docker exec -it mymongo /bin/bash 
 >>> mongo
-
+```
+### 3) Run Nginx on windows
+### 4) Run redis on linux
+```shell
+redis-server  /home/kali/Desktop/redis.conf 
 redis-cli
 ```
+### 5) Run the app on intellij
+#### - ServiceHospAppication
+#### - ServiceCmnApplicagion
+#### - ManageApplication
+
+
+### 6) Run Nacos on windows
 
 
 
