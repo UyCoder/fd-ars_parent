@@ -79,12 +79,20 @@ redis-server  /home/kali/Desktop/redis.conf
 redis-cli
 ```
 ### 5) Run the app on intellij
-#### - ServiceHospAppication
-#### - ServiceCmnApplicagion
-#### - ManageApplication
+- ServiceHospAppication
+- ServiceCmnApplicagion
+- ManageApplication
 
 
 ### 6) Run Nacos on windows
+
+### 7) Run front-end application on VS Code
+Front-end application is developed on Vue.js and here is the link:
+https://github.com/UyCoder/vue-admin-template-master-working-
+
+```shell
+npm run dev
+```
 
 
 
