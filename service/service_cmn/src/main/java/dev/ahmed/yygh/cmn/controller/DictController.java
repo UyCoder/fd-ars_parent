@@ -37,11 +37,20 @@ public class DictController {
     }
 
 
+    //get child data with dictCode
+    @ApiOperation(value = "get child data with dictCode")
+    @GetMapping("findByDictCode/{dictCode}")
+    public Result findByDictCode(@PathVariable String dictCode) {
+        List<Dict> list = dictService.findByDictCode(dictCode);
+        return Result.ok(list);
+    }
+
 
     // search child data with id
     @ApiOperation(value = "search child data with id")
     @GetMapping("findChildData/{id}")
     public Result findChildData(@PathVariable Long id) {
+
         List<Dict> list = dictService.findChildData(id);
         return Result.ok(list);
     }

@@ -101,7 +101,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             Dict dict = baseMapper.selectOne(wrapper);
             return dict.getName();
         } else {
-            Dict Codedict =this.getDictByCode(dictCode);
+            Dict Codedict =this.getDictByDictCode(dictCode);
             Long parent_id = Codedict.getId();
             Dict findDict = baseMapper.selectOne(new QueryWrapper<Dict>()
                     .eq("parent_id", parent_id)
@@ -111,7 +111,16 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
 
       }
 
-    private Dict getDictByCode(String dictCode) {
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        // get id with dictCode
+        Dict dict = this.getDictByDictCode(dictCode);
+        // get child data with id
+        List<Dict> childData = this.findChildData(dict.getId());
+        return childData;
+    }
+
+    private Dict getDictByDictCode(String dictCode) {
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();
         wrapper.eq("dict_code", dictCode);
         Dict codeDict = baseMapper.selectOne(wrapper);
