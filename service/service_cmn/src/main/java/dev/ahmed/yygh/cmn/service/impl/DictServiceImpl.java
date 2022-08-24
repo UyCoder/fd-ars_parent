@@ -109,7 +109,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             return findDict.getName();
         }
 
-    }
+      }
 
     private Dict getDictByCode(String dictCode) {
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();

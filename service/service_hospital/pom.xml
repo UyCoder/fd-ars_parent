@@ -29,8 +29,12 @@
             <artifactId>spring-data-mongodb</artifactId>
         </dependency>
 
-
-   </dependencies>
+        <dependency>
+            <groupId>dev.ahmed</groupId>
+            <artifactId>service_cmn_client</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <finalName>service-hosp</finalName>

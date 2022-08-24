@@ -1,6 +1,7 @@
 package dev.ahmed.yygh.hosp.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import dev.ahmed.yygh.cmn.client.DictFeignClient;
 import dev.ahmed.yygh.hosp.repository.HospitalRepository;
 import dev.ahmed.yygh.hosp.service.HospitalService;
 import dev.ahmed.yygh.model.hosp.Hospital;
@@ -12,6 +13,7 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -20,6 +22,9 @@ public class HospitalServiceImpl implements HospitalService {
 
     @Autowired
     private HospitalRepository hospitalRepository;
+
+    @Autowired
+    private DictFeignClient dictFeignClient;
 
     @Override
     public void save(Map<String, Object> paramMap) {
@@ -72,7 +77,29 @@ public class HospitalServiceImpl implements HospitalService {
         // example object
         Example<Hospital> example = Example.of(hospital, matcher);
         // pageable object
-        Page<Hospital> all = hospitalRepository.findAll(example, pageable);
-        return all;
+        Page<Hospital> pages = hospitalRepository.findAll(example, pageable);
+
+        List<Hospital> content = pages.getContent();
+        // get list
+        pages.getContent().stream().forEach(item->{
+            this.setHospitalHosType(item);
+        });
+
+
+        return pages;
+    }
+
+    private Hospital setHospitalHosType(Hospital hospital) {
+        // get hostype with dictCode and value
+        String hostypeString = dictFeignClient.getName("Hostype", hospital.getHostype());
+
+        // get provinceCode, cityCode, DistrictCode
+        String provinceString = dictFeignClient.getName(hospital.getProvinceCode());
+        String cityString = dictFeignClient.getName(hospital.getCityCode());
+        String districtString = dictFeignClient.getName(hospital.getDistrictCode());
+
+        hospital.getParam().put("fullAdress", provinceString+cityString+districtString);
+        hospital.getParam().put("hostypeString", hostypeString);
+        return  hospital;
     }
 }
