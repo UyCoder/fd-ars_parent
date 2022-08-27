@@ -89,6 +89,15 @@ public class HospitalServiceImpl implements HospitalService {
         return pages;
     }
 
+    @Override
+    public void updateStatus(String id, Integer status) {
+        Hospital hospital = hospitalRepository.findById(id).get();
+
+        hospital.setStatus(status);
+        hospital.setUpdateTime(new Date());
+        hospitalRepository.save(hospital);
+    }
+
     private Hospital setHospitalHosType(Hospital hospital) {
         // get hostype with dictCode and value
         String hostypeString = dictFeignClient.getName("Hostype", hospital.getHostype());

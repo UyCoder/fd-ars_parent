@@ -5,12 +5,10 @@ import dev.ahmed.yygh.hosp.service.HospitalService;
 import dev.ahmed.yygh.model.hosp.Hospital;
 import dev.ahmed.yygh.vo.hosp.HospitalQueryVo;
 import dev.ahmed.yygh.vo.hosp.HospitalSetQueryVo;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("admin/hosp/hospital")
@@ -28,5 +26,13 @@ public class HospitalController {
         Page<Hospital> pageModel = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
         return Result.ok(pageModel);
 
-        }
+    }
+
+    @ApiOperation(value = "Update Hospital Status")
+    @GetMapping("updateHospStatus/{id}/{status}")
+    public Result updateHospStatus(@PathVariable String id,
+                                   @PathVariable Integer status) {
+        hospitalService.updateStatus(id, status);
+        return Result.ok();
+    }
 }

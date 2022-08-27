@@ -15,4 +15,6 @@ public interface HospitalService {
 
     // hospital paging search
     Page<Hospital> selectHospPage(Integer page, Integer limit, HospitalQueryVo hospitalQueryVo);
+
+    void updateStatus(String id, Integer status);
 }
