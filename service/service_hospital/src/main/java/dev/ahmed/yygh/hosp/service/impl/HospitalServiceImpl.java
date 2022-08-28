@@ -13,6 +13,7 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -97,6 +98,20 @@ public class HospitalServiceImpl implements HospitalService {
         hospital.setUpdateTime(new Date());
         hospitalRepository.save(hospital);
     }
+
+    @Override
+    public Map<String, Object> getHospById(String id) {
+        Map<String, Object> result = new HashMap<>();
+        Hospital hospital = this.setHospitalHosType(hospitalRepository.findById(id).get());
+        result.put("hospital", hospital);
+
+        result.put("bookingRule", hospital.getBookingRule());
+        // no need to return again
+        hospital.setBookingRule(null);
+
+        return result;
+    }
+
 
     private Hospital setHospitalHosType(Hospital hospital) {
         // get hostype with dictCode and value

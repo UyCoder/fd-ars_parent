@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("admin/hosp/hospital")
 @CrossOrigin
@@ -34,5 +36,13 @@ public class HospitalController {
                                    @PathVariable Integer status) {
         hospitalService.updateStatus(id, status);
         return Result.ok();
+    }
+
+    // hospital details
+    @ApiOperation(value = "Hospital Details")
+    @GetMapping("showHospDetail/{id}")
+    public Result showHospDetail(@PathVariable String id) {
+        Map<String, Object> map = hospitalService.getHospById(id);
+        return Result.ok(map);
     }
 }
