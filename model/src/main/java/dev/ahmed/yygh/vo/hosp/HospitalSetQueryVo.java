@@ -6,7 +6,6 @@ import lombok.Data;
 
 @Data
 public class HospitalSetQueryVo {
-
     @ApiModelProperty(value = "hospital name")
     private String hosname;
 

@@ -28,7 +28,6 @@ public class Swagger2Config {
                 //只显示api路径下的页面
                 .paths(Predicates.and(PathSelectors.regex("/api/.*")))
                 .build();
-
     }
 
     @Bean
@@ -41,7 +40,6 @@ public class Swagger2Config {
                 //只显示admin路径下的页面
                 .paths(Predicates.and(PathSelectors.regex("/admin/.*")))
                 .build();
-
     }
 
     private ApiInfo webApiInfo() {
@@ -63,6 +61,4 @@ public class Swagger2Config {
                 .contact(new Contact("Forum_Dent", "http://ForumDent.com", "ahmedBughra@gmail.com"))
                 .build();
     }
-
-
 }
