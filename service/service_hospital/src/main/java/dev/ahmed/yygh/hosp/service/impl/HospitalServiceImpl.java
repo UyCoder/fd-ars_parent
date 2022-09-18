@@ -20,7 +20,6 @@ import java.util.Map;
 @Service
 public class HospitalServiceImpl implements HospitalService {
 
-
     @Autowired
     private HospitalRepository hospitalRepository;
 
@@ -52,12 +51,9 @@ public class HospitalServiceImpl implements HospitalService {
             hospital.setIsDeleted(0);
             hospitalRepository.save(hospital);
         }
-
-
-
     }
 
-//    search hospital by hoscode
+    //    search hospital by hoscode
     @Override
     public Hospital getByHoscode(String hoscode) {
         Hospital hospitalByHoscode = hospitalRepository.getHospitalByHoscode(hoscode);
@@ -82,10 +78,9 @@ public class HospitalServiceImpl implements HospitalService {
 
         List<Hospital> content = pages.getContent();
         // get list
-        pages.getContent().stream().forEach(item->{
+        pages.getContent().stream().forEach(item -> {
             this.setHospitalHosType(item);
         });
-
 
         return pages;
     }
@@ -122,8 +117,8 @@ public class HospitalServiceImpl implements HospitalService {
         String cityString = dictFeignClient.getName(hospital.getCityCode());
         String districtString = dictFeignClient.getName(hospital.getDistrictCode());
 
-        hospital.getParam().put("fullAdress", provinceString+cityString+districtString);
+        hospital.getParam().put("fullAdress", provinceString + cityString + districtString);
         hospital.getParam().put("hostypeString", hostypeString);
-        return  hospital;
+        return hospital;
     }
 }

@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:include="common/meta :: meta"></head>
 <script th:inline="javascript">
-    $(function(){
+    $(function () {
 
     });
 </script>
@@ -36,7 +36,7 @@
                         </a>
 
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a  href="javascript:opt.openWin('/sysUser/pswd','修改密码',630,510)">修改密码</a></li>
+                            <li><a href="javascript:opt.openWin('/sysUser/pswd','修改密码',630,510)">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a th:href="@{/index/logout}">安全退出</a>
                             </li>
@@ -67,10 +67,13 @@
         <div class="row border-bottom" style="display: none;">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
 
-                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" method="post" action="http://www.zi-han.net/theme/hplus/search_results.html">
+                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                        class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" method="post"
+                          action="http://www.zi-han.net/theme/hplus/search_results.html">
                         <div class="form-group">
-                            <input type="text" placeholder='管理系统' class="form-control" name="top-search" id="top-search" readonly="readonly"/>
+                            <input type="text" placeholder='管理系统' class="form-control" name="top-search" id="top-search"
+                                   readonly="readonly"/>
                         </div>
                     </form>
                 </div>
@@ -110,17 +113,19 @@
                     </li>
                 </ul>
             </div>
-            <a class="navbar-minimalize roll-nav roll-right J_tabExit" href="#" title="收缩展开菜单"><i class="fa fa-bars"></i> </a>
+            <a class="navbar-minimalize roll-nav roll-right J_tabExit" href="#" title="收缩展开菜单"><i
+                    class="fa fa-bars"></i> </a>
             <!--<a th:href="@{/index/logout}" class=""><i class="fa fa fa-sign-out"></i> 退出</a>-->
         </div>
         <!-- 包在里面了 -->
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" th:src="@{/main}" frameborder="0" data-id="index_v1.html"></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" th:src="@{/main}" frameborder="0"
+                    data-id="index_v1.html"></iframe>
         </div>
-<!--         <div class="footer">
-            <div class="pull-right">&copy; 版权所有：万达
-            </div>
-        </div> -->
+        <!--         <div class="footer">
+                    <div class="pull-right">&copy; 版权所有：万达
+                    </div>
+                </div> -->
     </div>
     <!--右侧部分结束-->
     <!--右侧边栏开始-->

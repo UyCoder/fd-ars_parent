@@ -39,7 +39,6 @@ public class ApiController {
     @Autowired
     private ScheduleService scheduleService;
 
-
     // delete schedule remove
     @PostMapping("/schedule/remove")
     public Result remove(HttpServletRequest request) {
@@ -51,14 +50,9 @@ public class ApiController {
         String hosScheduleId = (String) paramMap.get("hosScheduleId");
 
         //TODO: check sign
-
         scheduleService.remove(hoscode, hosScheduleId);
         return Result.ok();
-
     }
-
-
-
 
 
     // schedule list api
@@ -73,8 +67,8 @@ public class ApiController {
         String depcode = (String) paramMap.get("depcode");
 
         // page and limit
-        int page = StringUtils.isEmpty((CharSequence) paramMap.get("page"))?1:Integer.parseInt((String) paramMap.get("page"));
-        int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit"))?1:Integer.parseInt((String) paramMap.get("limit"));
+        int page = StringUtils.isEmpty((CharSequence) paramMap.get("page")) ? 1 : Integer.parseInt((String) paramMap.get("page"));
+        int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit")) ? 1 : Integer.parseInt((String) paramMap.get("limit"));
 
         // TODO check sign
 
@@ -98,7 +92,6 @@ public class ApiController {
 
         scheduleService.save(paramMap);
         return Result.ok();
-
     }
 
 
@@ -126,8 +119,8 @@ public class ApiController {
         //hoscode
         String hoscode = (String) paramMap.get("hoscode");
         // page and limit
-        int page = StringUtils.isEmpty((CharSequence) paramMap.get("page"))?1:Integer.parseInt((String) paramMap.get("page"));
-        int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit"))?1:Integer.parseInt((String) paramMap.get("limit"));
+        int page = StringUtils.isEmpty((CharSequence) paramMap.get("page")) ? 1 : Integer.parseInt((String) paramMap.get("page"));
+        int limit = StringUtils.isEmpty((CharSequence) paramMap.get("limit")) ? 1 : Integer.parseInt((String) paramMap.get("limit"));
 
         // TODO check sign
 
@@ -142,7 +135,7 @@ public class ApiController {
 
     // upload hospital api
     @PostMapping("/saveDepartment")
-    public Result saveDepartment(HttpServletRequest request){
+    public Result saveDepartment(HttpServletRequest request) {
         // get hospital data
         Map<String, String[]> requestMap = request.getParameterMap();
         Map<String, Object> paramMap = HttpRequestHelper.switchMap(requestMap);

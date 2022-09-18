@@ -21,84 +21,84 @@ import java.util.Date;
 @ApiModel(description = "Patient")
 @TableName("patient")
 public class Patient extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "userId")
-	@TableField("user_id")
-	private Long userId;
 
-	@ApiModelProperty(value = "name")
-	@TableField("name")
-	private String name;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "certificatesType")
-	@TableField("certificates_type")
-	private String certificatesType;
+    @ApiModelProperty(value = "userId")
+    @TableField("user_id")
+    private Long userId;
 
-	@ApiModelProperty(value = "certificatesNo")
-	@TableField("certificates_no")
-	private String certificatesNo;
+    @ApiModelProperty(value = "name")
+    @TableField("name")
+    private String name;
 
-	@ApiModelProperty(value = "sex")
-	@TableField("sex")
-	private Integer sex;
+    @ApiModelProperty(value = "certificatesType")
+    @TableField("certificates_type")
+    private String certificatesType;
 
-	@ApiModelProperty(value = "birthdate")
-	@JsonFormat(pattern = "yyyy-MM-dd")
-	@TableField("birthdate")
-	private Date birthdate;
+    @ApiModelProperty(value = "certificatesNo")
+    @TableField("certificates_no")
+    private String certificatesNo;
 
-	@ApiModelProperty(value = "phone")
-	@TableField("phone")
-	private String phone;
+    @ApiModelProperty(value = "sex")
+    @TableField("sex")
+    private Integer sex;
 
-	@ApiModelProperty(value = "isMarry")
-	@TableField("is_marry")
-	private Integer isMarry;
+    @ApiModelProperty(value = "birthdate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @TableField("birthdate")
+    private Date birthdate;
 
-	@ApiModelProperty(value = "provinceCode")
-	@TableField("province_code")
-	private String provinceCode;
+    @ApiModelProperty(value = "phone")
+    @TableField("phone")
+    private String phone;
 
-	@ApiModelProperty(value = "cityCode")
-	@TableField("city_code")
-	private String cityCode;
+    @ApiModelProperty(value = "isMarry")
+    @TableField("is_marry")
+    private Integer isMarry;
 
-	@ApiModelProperty(value = "districtCode")
-	@TableField("district_code")
-	private String districtCode;
+    @ApiModelProperty(value = "provinceCode")
+    @TableField("province_code")
+    private String provinceCode;
 
-	@ApiModelProperty(value = "address")
-	@TableField("address")
-	private String address;
+    @ApiModelProperty(value = "cityCode")
+    @TableField("city_code")
+    private String cityCode;
 
-	@ApiModelProperty(value = "contactsName")
-	@TableField("contacts_name")
-	private String contactsName;
+    @ApiModelProperty(value = "districtCode")
+    @TableField("district_code")
+    private String districtCode;
 
-	@ApiModelProperty(value = "contactsCertificatesType")
-	@TableField("contacts_certificates_type")
-	private String contactsCertificatesType;
+    @ApiModelProperty(value = "address")
+    @TableField("address")
+    private String address;
 
-	@ApiModelProperty(value = "contactsCertificatesNo")
-	@TableField("contacts_certificates_no")
-	private String contactsCertificatesNo;
+    @ApiModelProperty(value = "contactsName")
+    @TableField("contacts_name")
+    private String contactsName;
 
-	@ApiModelProperty(value = "contactsPhone")
-	@TableField("contacts_phone")
-	private String contactsPhone;
+    @ApiModelProperty(value = "contactsCertificatesType")
+    @TableField("contacts_certificates_type")
+    private String contactsCertificatesType;
 
-	@ApiModelProperty(value = "isInsure")
-	@TableField("is_insure")
-	private Integer isInsure;
+    @ApiModelProperty(value = "contactsCertificatesNo")
+    @TableField("contacts_certificates_no")
+    private String contactsCertificatesNo;
 
-	@ApiModelProperty(value = "cardNo")
-	@TableField("card_no")
-	private String cardNo;
+    @ApiModelProperty(value = "contactsPhone")
+    @TableField("contacts_phone")
+    private String contactsPhone;
 
-	@ApiModelProperty(value = "status（0：默认 1：已认证）")
-	@TableField("status")
-	private String status;
+    @ApiModelProperty(value = "isInsure")
+    @TableField("is_insure")
+    private Integer isInsure;
+
+    @ApiModelProperty(value = "cardNo")
+    @TableField("card_no")
+    private String cardNo;
+
+    @ApiModelProperty(value = "status（0：默认 1：已认证）")
+    @TableField("status")
+    private String status;
 }
 

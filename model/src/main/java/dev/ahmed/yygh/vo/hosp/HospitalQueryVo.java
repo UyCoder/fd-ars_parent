@@ -10,27 +10,27 @@ import java.io.Serializable;
 @ApiModel(description = "Hospital")
 public class HospitalQueryVo implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "hoscode")
-	private String hoscode;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "hosname")
-	private String hosname;
+    @ApiModelProperty(value = "hoscode")
+    private String hoscode;
 
-	@ApiModelProperty(value = "hostype")
-	private String hostype;
+    @ApiModelProperty(value = "hosname")
+    private String hosname;
 
-	@ApiModelProperty(value = "provinceCode")
-	private String provinceCode;
+    @ApiModelProperty(value = "hostype")
+    private String hostype;
 
-	@ApiModelProperty(value = "cityCode")
-	private String cityCode;
+    @ApiModelProperty(value = "provinceCode")
+    private String provinceCode;
 
-	@ApiModelProperty(value = "districtCode")
-	private String districtCode;
+    @ApiModelProperty(value = "cityCode")
+    private String cityCode;
 
-	@ApiModelProperty(value = "status")
-	private Integer status;
+    @ApiModelProperty(value = "districtCode")
+    private String districtCode;
+
+    @ApiModelProperty(value = "status")
+    private Integer status;
 }
 

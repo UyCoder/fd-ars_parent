@@ -17,14 +17,13 @@ import java.io.Serializable;
 @Data
 @ApiModel(description = "user query vo")
 public class UserQueryVo implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "username")
-	private String username;
 
-	@ApiModelProperty(value = "nickName")
-	private String nickName;
+    private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "username")
+    private String username;
+
+    @ApiModelProperty(value = "nickName")
+    private String nickName;
 }
 

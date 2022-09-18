@@ -7,9 +7,9 @@ import lombok.Getter;
  */
 @Getter
 public enum ResultCodeEnum {
-    SUCCESS(200,"Success"),
-    FAIL(201, "Failed"),
-    PARAM_ERROR( 202, "The parameter is incorrect"),
+    SUCCESS(200, "مۇۋاپىقىيەتلىك ئۇچۇر ئالماشتى"),
+    FAIL(201, "مۇۋەپپىقىيەتسىز بولدى. قايتا سىناڭ"),
+    PARAM_ERROR(202, "The parameter is incorrect"),
     SERVICE_ERROR(203, "Service exception"),
     DATA_ERROR(204, "Data error"),
     DATA_UPDATE_ERROR(205, "Data version abnormal"),
@@ -24,10 +24,10 @@ public enum ResultCodeEnum {
     LOGIN_AURH(214, "Login required"),
     LOGIN_ACL(215, "No permission"),
 
-    URL_ENCODE_ERROR( 216, "URL encoding failed"),
-    ILLEGAL_CALLBACK_REQUEST_ERROR( 217, "Illegal callback request"),
-    FETCH_ACCESSTOKEN_FAILD( 218, "Failed to get accessToken"),
-    FETCH_USERINFO_ERROR( 219, "Failed to get user information"),
+    URL_ENCODE_ERROR(216, "URL encoding failed"),
+    ILLEGAL_CALLBACK_REQUEST_ERROR(217, "Illegal callback request"),
+    FETCH_ACCESSTOKEN_FAILD(218, "Failed to get accessToken"),
+    FETCH_USERINFO_ERROR(219, "Failed to get user information"),
     //LOGIN_ERROR( 23005, "Login failed"),
 
     PAY_RUN(220, "Paying"),

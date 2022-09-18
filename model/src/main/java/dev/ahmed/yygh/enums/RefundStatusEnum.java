@@ -1,10 +1,10 @@
 package dev.ahmed.yygh.enums;
 
 public enum RefundStatusEnum {
-    UNREFUND(1,"Unrefund"),
-    REFUND(2,"Refund");
+    UNREFUND(1, "Unrefund"),
+    REFUND(2, "Refund");
 
-    private Integer status ;
+    private Integer status;
 
     public Integer getStatus() {
         return status;
@@ -22,11 +22,10 @@ public enum RefundStatusEnum {
         this.name = name;
     }
 
-    private String name ;
+    private String name;
 
     RefundStatusEnum(Integer status, String name) {
         this.status = status;
-        this.name=name;
+        this.name = name;
     }
-
 }

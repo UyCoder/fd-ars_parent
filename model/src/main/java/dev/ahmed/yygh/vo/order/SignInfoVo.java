@@ -18,15 +18,14 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(description = "SignInfo")
-public class SignInfoVo  implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class SignInfoVo implements Serializable {
 
-	@ApiModelProperty(value = "apiUrl")
-	private String apiUrl;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "signKey")
-	private String signKey;
+    @ApiModelProperty(value = "apiUrl")
+    private String apiUrl;
 
+    @ApiModelProperty(value = "signKey")
+    private String signKey;
 }
 

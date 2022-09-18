@@ -14,20 +14,19 @@ import lombok.Data;
 @Data
 public class DictEeVo {
 
-	@ExcelProperty(value = "id" ,index = 0)
-	private Long id;
+    @ExcelProperty(value = "id", index = 0)
+    private Long id;
 
-	@ExcelProperty(value = "parentId" ,index = 1)
-	private Long parentId;
+    @ExcelProperty(value = "parentId", index = 1)
+    private Long parentId;
 
-	@ExcelProperty(value = "name" ,index = 2)
-	private String name;
+    @ExcelProperty(value = "name", index = 2)
+    private String name;
 
-	@ExcelProperty(value = "value" ,index = 3)
-	private String value;
+    @ExcelProperty(value = "value", index = 3)
+    private String value;
 
-	@ExcelProperty(value = "dictCode" ,index = 4)
-	private String dictCode;
-
+    @ExcelProperty(value = "dictCode", index = 4)
+    private String dictCode;
 }
 

@@ -116,8 +116,9 @@ div.dataTables_scrollFoot table {
     background-color: #d0f1fd;
     border-color: #caf2fc;
 }
-.table tbody tr.active td a{
-    color:#000;
+
+.table tbody tr.active td a {
+    color: #000;
 }
 
 .table tbody tr.active:hover td,

@@ -12,14 +12,14 @@ import java.util.List;
 @ApiModel(description = "Department")
 public class DepartmentVo {
 
-	@ApiModelProperty(value = "depcode")
-	private String depcode;
+    @ApiModelProperty(value = "depcode")
+    private String depcode;
 
-	@ApiModelProperty(value = "depname")
-	private String depname;
+    @ApiModelProperty(value = "depname")
+    private String depname;
 
-	@ApiModelProperty(value = "children")
-	private List<DepartmentVo> children;
+    @ApiModelProperty(value = "children")
+    private List<DepartmentVo> children;
 
 }
 

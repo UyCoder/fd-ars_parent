@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="LoginVo")
+@ApiModel(description = "LoginVo")
 public class LoginVo {
 
     @ApiModelProperty(value = "openid")

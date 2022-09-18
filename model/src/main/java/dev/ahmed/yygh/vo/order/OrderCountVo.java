@@ -7,12 +7,11 @@ import lombok.Data;
 @Data
 @ApiModel(description = "OrderCountVo")
 public class OrderCountVo {
-	
-	@ApiModelProperty(value = "reserveDate")
-	private String reserveDate;
 
-	@ApiModelProperty(value = "count")
-	private Integer count;
+    @ApiModelProperty(value = "reserveDate")
+    private String reserveDate;
 
+    @ApiModelProperty(value = "count")
+    private Integer count;
 }
 

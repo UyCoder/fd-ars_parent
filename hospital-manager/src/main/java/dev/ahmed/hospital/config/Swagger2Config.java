@@ -19,6 +19,7 @@ import java.util.List;
 
 /**
  * Swagger2配置信息
+ *
  * @author qy
  */
 @Configuration
@@ -26,7 +27,7 @@ import java.util.List;
 public class Swagger2Config {
 
     @Bean
-    public Docket webApiConfig(){
+    public Docket webApiConfig() {
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("webApi")
@@ -37,10 +38,9 @@ public class Swagger2Config {
                 //过滤掉所有error或error.*页面
                 //.paths(Predicates.not(PathSelectors.regex("/error.*")))
                 .build();
-
     }
 
-    private ApiInfo webApiInfo(){
+    private ApiInfo webApiInfo() {
 
         return new ApiInfoBuilder()
                 .title("网站-API文档")
@@ -49,6 +49,4 @@ public class Swagger2Config {
                 .contact(new Contact("qy", "http://atguigu.com", "55317332@qq.com"))
                 .build();
     }
-
-
 }

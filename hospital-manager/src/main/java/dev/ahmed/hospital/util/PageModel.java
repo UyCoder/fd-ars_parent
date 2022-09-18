@@ -40,7 +40,7 @@ public class PageModel<T> implements java.io.Serializable {
             pageSize = 5;
         }
 
-        totalPage = (int)(total / pageSize);
+        totalPage = (int) (total / pageSize);
 
         if (0 != total % pageSize) {
             totalPage += 1;
@@ -97,30 +97,30 @@ public class PageModel<T> implements java.io.Serializable {
     public int[] getNavigatepageNums() {
         int beginPageIndex;//页码列表的开始索引
         int endPageIndex;//页码列表的结束索引
-        if(totalPage <= 10){
+        if (totalPage <= 10) {
             beginPageIndex = 1;
             endPageIndex = totalPage;
         }
         //总页数多于10页，则显示当前页附近的共10个页码
-        else{
+        else {
             //当前页附近的共10个页码（前4个+当前页+后5个）
             beginPageIndex = pageNum - 4;
             endPageIndex = pageNum + 5;
 
             //当前面的页码不足4个时，则显示前10个页码
-            if(beginPageIndex < 1){
+            if (beginPageIndex < 1) {
                 beginPageIndex = 1;
                 endPageIndex = 10;
             }
             //当后面的页码不足5个时，则显示后10个页码
-            if(endPageIndex > totalPage){
+            if (endPageIndex > totalPage) {
                 endPageIndex = totalPage;
-                beginPageIndex = totalPage -10 + 1;
+                beginPageIndex = totalPage - 10 + 1;
             }
         }
-        navigatepageNums = new int[endPageIndex-beginPageIndex+1];
+        navigatepageNums = new int[endPageIndex - beginPageIndex + 1];
         int j = 0;
-        for(int i=beginPageIndex; i<=endPageIndex; i++) {
+        for (int i = beginPageIndex; i <= endPageIndex; i++) {
             navigatepageNums[j] = i;
             j++;
         }

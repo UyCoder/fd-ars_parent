@@ -21,7 +21,9 @@
                         <div class="form-group">
                             <div class="col-sm-4 col-sm-offset-2">
                                 <button class="btn btn-primary" type="submit">批量导入</button>
-                                <button class="btn btn-white" type="button" onclick="javascript:opt.closeWin();" value="取消">取消</button>
+                                <button class="btn btn-white" type="button" onclick="javascript:opt.closeWin();"
+                                        value="取消">取消
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -33,15 +35,15 @@
 </body>
 </html>
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         $('#ec').validate({
-            rules:{
-                name:"required"
+            rules: {
+                name: "required"
             },
-            messages:{
-                name:"必须输入"
+            messages: {
+                name: "必须输入"
             },
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 opt.load();
                 $(form).find(":submit").attr("disabled", true).text("正在提交...");
                 form.submit();

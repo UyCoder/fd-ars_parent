@@ -56,7 +56,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         response.setContentType("application/vnd.ms-excel");
         response.setCharacterEncoding("UTF-8");
         String fileName = "dict";
-        response.setHeader("Content-Disposition", "attachment;filename="+fileName+".xls");
+        response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xls");
 
         // search Database
         List<Dict> dictList = baseMapper.selectList(null);
@@ -101,7 +101,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             Dict dict = baseMapper.selectOne(wrapper);
             return dict.getName();
         } else {
-            Dict Codedict =this.getDictByDictCode(dictCode);
+            Dict Codedict = this.getDictByDictCode(dictCode);
             Long parent_id = Codedict.getId();
             Dict findDict = baseMapper.selectOne(new QueryWrapper<Dict>()
                     .eq("parent_id", parent_id)
@@ -109,7 +109,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             return findDict.getName();
         }
 
-      }
+    }
 
     @Override
     public List<Dict> findByDictCode(String dictCode) {
@@ -128,7 +128,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
     }
 
     // booleadn has child data
-    private boolean isChildren(Long id){
+    private boolean isChildren(Long id) {
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();
         wrapper.eq("parent_id", id);
         Integer count = baseMapper.selectCount(wrapper);

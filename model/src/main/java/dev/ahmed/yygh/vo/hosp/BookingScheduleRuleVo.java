@@ -20,28 +20,28 @@ import java.util.Date;
 @Data
 @ApiModel(description = "BookingScheduleRuleVo")
 public class BookingScheduleRuleVo {
-	
-	@ApiModelProperty(value = "workDate")
-	@JsonFormat(pattern = "yyyy-MM-dd")
-	private Date workDate;
 
-	@ApiModelProperty(value = "workDateMd")
-	@JsonFormat(pattern = "MM月dd日")
-	private Date workDateMd; //方便页面使用
+    @ApiModelProperty(value = "workDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date workDate;
 
-	@ApiModelProperty(value = "dayOfWeek")
-	private String dayOfWeek;
+    @ApiModelProperty(value = "workDateMd")
+    @JsonFormat(pattern = "MM月dd日")
+    private Date workDateMd; //方便页面使用
 
-	@ApiModelProperty(value = "docCount")
-	private Integer docCount;
+    @ApiModelProperty(value = "dayOfWeek")
+    private String dayOfWeek;
 
-	@ApiModelProperty(value = "reservedNumber")
-	private Integer reservedNumber;
+    @ApiModelProperty(value = "docCount")
+    private Integer docCount;
 
-	@ApiModelProperty(value = "availableNumber")
-	private Integer availableNumber;
+    @ApiModelProperty(value = "reservedNumber")
+    private Integer reservedNumber;
 
-	@ApiModelProperty(value = "status 0：正常 1：即将放号 -1：当天已停止挂号")
-	private Integer status;
+    @ApiModelProperty(value = "availableNumber")
+    private Integer availableNumber;
+
+    @ApiModelProperty(value = "status 0：正常 1：即将放号 -1：当天已停止挂号")
+    private Integer status;
 }
 

@@ -17,11 +17,10 @@ import java.io.Serializable;
 @Data
 @ApiModel(description = "Role Quiery")
 public class RoleQueryVo implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "roleName")
-	private String roleName;
 
+    private static final long serialVersionUID = 1L;
+
+    @ApiModelProperty(value = "roleName")
+    private String roleName;
 }
 

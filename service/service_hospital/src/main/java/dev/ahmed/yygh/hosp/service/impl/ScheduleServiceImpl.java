@@ -20,7 +20,6 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Autowired
     private ScheduleRepository scheduleRepository;
 
-
     @Override
     public void save(Map<String, Object> paramMap) {
 
@@ -45,7 +44,6 @@ public class ScheduleServiceImpl implements ScheduleService {
             schedule.setStatus(1);
             scheduleRepository.save(schedule);
         }
-
     }
 
     @Override
@@ -76,6 +74,5 @@ public class ScheduleServiceImpl implements ScheduleService {
         if (schedule != null) {
             scheduleRepository.deleteById(schedule.getId());
         }
-
     }
 }

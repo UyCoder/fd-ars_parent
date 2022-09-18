@@ -23,28 +23,27 @@ import java.util.List;
 @ApiModel(description = "Department")
 @Document("Department")
 public class Department extends BaseMongoEntity {
-	
-	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "hoscode")
-	@Indexed // regular
-	private String hoscode;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "depcode")
-	@Indexed(unique = true) // unique
-	private String depcode;
+    @ApiModelProperty(value = "hoscode")
+    @Indexed // regular
+    private String hoscode;
 
-	@ApiModelProperty(value = "depname")
-	private String depname;
+    @ApiModelProperty(value = "depcode")
+    @Indexed(unique = true) // unique
+    private String depcode;
 
-	@ApiModelProperty(value = "intro")
-	private String intro;
+    @ApiModelProperty(value = "depname")
+    private String depname;
 
-	@ApiModelProperty(value = "bigcode")
-	private String bigcode;
+    @ApiModelProperty(value = "intro")
+    private String intro;
 
-	@ApiModelProperty(value = "bigname")
-	private String bigname;
+    @ApiModelProperty(value = "bigcode")
+    private String bigcode;
 
+    @ApiModelProperty(value = "bigname")
+    private String bigname;
 }
 

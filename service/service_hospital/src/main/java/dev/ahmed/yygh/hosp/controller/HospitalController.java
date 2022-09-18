@@ -16,7 +16,6 @@ import java.util.Map;
 @RequestMapping("admin/hosp/hospital")
 @CrossOrigin
 public class HospitalController {
-
     @Autowired
     private HospitalService hospitalService;
 
@@ -27,7 +26,6 @@ public class HospitalController {
                                HospitalQueryVo hospitalQueryVo) {
         Page<Hospital> pageModel = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
         return Result.ok(pageModel);
-
     }
 
     @ApiOperation(value = "Update Hospital Status")

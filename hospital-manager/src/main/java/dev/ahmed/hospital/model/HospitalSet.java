@@ -18,17 +18,17 @@ import java.io.Serializable;
 @ApiModel(description = "HospitalSet")
 @TableName("hospital_set")
 public class HospitalSet extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "医院编号")
-	private String hoscode;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "签名秘钥")
-	private String signKey;
+    @ApiModelProperty(value = "医院编号")
+    private String hoscode;
 
-	@ApiModelProperty(value = "api基础路径")
-	private String apiUrl;
+    @ApiModelProperty(value = "签名秘钥")
+    private String signKey;
+
+    @ApiModelProperty(value = "api基础路径")
+    private String apiUrl;
 
 }
 

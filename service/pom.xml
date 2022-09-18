@@ -63,20 +63,20 @@
         </dependency>
 
 
-    <dependency>
-         <groupId>org.springframework.cloud</groupId>
-         <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
 
-  <dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
- </dependency>
-<!--&lt;!&ndash;        &lt;!&ndash; 流量控制 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;        <dependency>-->
-<!--&lt;!&ndash;            <groupId>com.alibaba.cloud</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+        </dependency>
+        <!--&lt;!&ndash;        &lt;!&ndash; 流量控制 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;        <dependency>-->
+        <!--&lt;!&ndash;            <groupId>com.alibaba.cloud</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
     </dependencies>
     <build>
         <plugins>
@@ -97,7 +97,8 @@
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <includes> <include>**/*.yml</include>
+                <includes>
+                    <include>**/*.yml</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>

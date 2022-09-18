@@ -19,6 +19,7 @@ public class YyghException extends RuntimeException {
 
     /**
      * Create exception object with status code and error message
+     *
      * @param message
      * @param code
      */
@@ -29,6 +30,7 @@ public class YyghException extends RuntimeException {
 
     /**
      * Receive enumeration type object and return corresponding exception object
+     *
      * @param resultCodeEnum
      */
     public YyghException(ResultCodeEnum resultCodeEnum) {

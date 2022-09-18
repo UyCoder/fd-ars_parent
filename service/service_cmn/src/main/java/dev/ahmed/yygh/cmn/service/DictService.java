@@ -19,11 +19,11 @@ import java.util.List;
 public interface DictService extends IService<Dict> {
     List<Dict> findChildData(Long id);
 
-     // export dict data
-     void exportDictData(HttpServletResponse response);
+    // export dict data
+    void exportDictData(HttpServletResponse response);
 
-     // import dict data
-     void importDictData(MultipartFile file);
+    // import dict data
+    void importDictData(MultipartFile file);
 
     String getDictName(String dictCode, String value);
 

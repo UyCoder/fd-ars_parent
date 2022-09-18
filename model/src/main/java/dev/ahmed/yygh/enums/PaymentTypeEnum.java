@@ -1,8 +1,8 @@
 package dev.ahmed.yygh.enums;
 
 public enum PaymentTypeEnum {
-    ALIPAY(1,"AliPay"),
-    WEIXIN(2,"Wexin" );
+    ALIPAY(1, "AliPay"),
+    WEIXIN(2, "Wexin");
 
     public Integer getStatus() {
         return status;
@@ -12,13 +12,13 @@ public enum PaymentTypeEnum {
         this.status = status;
     }
 
-    private Integer status ;
-    private String comment ;
+    private Integer status;
+    private String comment;
 
 
-    PaymentTypeEnum(Integer status, String comment ){
+    PaymentTypeEnum(Integer status, String comment) {
         this.status = status;
-        this.comment=comment;
+        this.comment = comment;
     }
 
     public String getComment() {
@@ -28,5 +28,4 @@ public enum PaymentTypeEnum {
     public void setComment(String comment) {
         this.comment = comment;
     }
-
 }

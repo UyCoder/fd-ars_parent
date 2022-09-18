@@ -27,5 +27,5 @@ public interface ApiService {
 
     boolean removeSchedule(String hosScheduleId);
 
-    void  saveBatchHospital() throws IOException;
+    void saveBatchHospital() throws IOException;
 }

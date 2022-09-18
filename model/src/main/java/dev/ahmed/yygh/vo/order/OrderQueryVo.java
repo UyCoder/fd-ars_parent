@@ -10,31 +10,29 @@ import java.util.Date;
 @ApiModel(description = "Order")
 public class OrderQueryVo {
 
+    @ApiModelProperty(value = "userId")
+    private Long userId;
 
-	@ApiModelProperty(value = "userId")
-	private Long userId;
-	
-	@ApiModelProperty(value = "outTradeNo")
-	private String outTradeNo;
+    @ApiModelProperty(value = "outTradeNo")
+    private String outTradeNo;
 
-	@ApiModelProperty(value = "patientId")
-	private Long patientId;
+    @ApiModelProperty(value = "patientId")
+    private Long patientId;
 
-	@ApiModelProperty(value = "patientName")
-	private String patientName;
+    @ApiModelProperty(value = "patientName")
+    private String patientName;
 
-	@ApiModelProperty(value = "keyword")
-	private String keyword;
+    @ApiModelProperty(value = "keyword")
+    private String keyword;
 
-	@ApiModelProperty(value = "orderStatus")
-	private String orderStatus;
+    @ApiModelProperty(value = "orderStatus")
+    private String orderStatus;
 
-	@ApiModelProperty(value = "reserveDate")
-	private String reserveDate;
+    @ApiModelProperty(value = "reserveDate")
+    private String reserveDate;
 
-	@ApiModelProperty(value = "createTime")
-	private String createTimeBegin;
-	private String createTimeEnd;
-
+    @ApiModelProperty(value = "createTime")
+    private String createTimeBegin;
+    private String createTimeEnd;
 }
 

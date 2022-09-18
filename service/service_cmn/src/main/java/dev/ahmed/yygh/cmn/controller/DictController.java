@@ -29,11 +29,10 @@ public class DictController {
     }
 
 
-
     // export data
     @GetMapping("/exportData")
     public void exportDict(HttpServletResponse response) {
-         dictService.exportDictData(response);
+        dictService.exportDictData(response);
     }
 
 

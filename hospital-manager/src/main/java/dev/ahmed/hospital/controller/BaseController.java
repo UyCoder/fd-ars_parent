@@ -69,5 +69,4 @@ public class BaseController {
         Map<String, Object> filters = WebUtils.getParametersStartingWith(request, "s_");
         return filters;
     }
-
 }

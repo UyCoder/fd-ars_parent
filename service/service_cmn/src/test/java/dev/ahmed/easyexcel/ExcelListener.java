@@ -16,7 +16,7 @@ public class ExcelListener extends AnalysisEventListener<UserData> {
 
     @Override
     public void invokeHeadMap(Map<Integer, String> headMap, AnalysisContext context) {
-        System.out.println("table head info"+headMap);
+        System.out.println("table head info" + headMap);
     }
 
     // after read all lines

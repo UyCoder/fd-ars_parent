@@ -26,34 +26,32 @@ import java.util.List;
 @ApiModel(description = "BookingRule")
 @Document("BookingRule")
 public class BookingRule {
-	
-	@ApiModelProperty(value = "cycle")
-	private Integer cycle;
 
-	@ApiModelProperty(value = "releaseTime")
-	private String releaseTime;
+    @ApiModelProperty(value = "cycle")
+    private Integer cycle;
 
-	@ApiModelProperty(value = "stopTime")
-	private String stopTime;
+    @ApiModelProperty(value = "releaseTime")
+    private String releaseTime;
 
-	@ApiModelProperty(value = "quitDay（如：就诊前一天为-1，当天为0）")
-	private Integer quitDay;
+    @ApiModelProperty(value = "stopTime")
+    private String stopTime;
 
-	@ApiModelProperty(value = "quitTime")
-	private String quitTime;
+    @ApiModelProperty(value = "quitDay（如：就诊前一天为-1，当天为0）")
+    private Integer quitDay;
 
-	@ApiModelProperty(value = "rule")
-	private List<String> rule;
+    @ApiModelProperty(value = "quitTime")
+    private String quitTime;
 
-	/**
-	 *
-	 * @param rule
-	 */
-	public void setRule(String rule) {
-		if(!StringUtils.isEmpty(rule)) {
-			this.rule = JSONArray.parseArray(rule, String.class);
-		}
-	}
+    @ApiModelProperty(value = "rule")
+    private List<String> rule;
 
+    /**
+     * @param rule
+     */
+    public void setRule(String rule) {
+        if (!StringUtils.isEmpty(rule)) {
+            this.rule = JSONArray.parseArray(rule, String.class);
+        }
+    }
 }
 

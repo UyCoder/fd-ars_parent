@@ -48,18 +48,16 @@ public class PageInfo<T> implements Serializable {
             this.pages = 1;
             this.list = list;
             this.size = list.size();
-            this.total = (long)list.size();
+            this.total = (long) list.size();
             this.startRow = 0;
             this.endRow = list.size() > 0 ? list.size() - 1 : 0;
         }
-
         if (list instanceof Collection) {
             this.navigatePages = navigatePages;
             this.calcNavigatepageNums();
             this.calcPage();
             this.judgePageBoudary();
         }
-
     }
 
     private void calcNavigatepageNums() {
@@ -67,7 +65,7 @@ public class PageInfo<T> implements Serializable {
         if (this.pages <= this.navigatePages) {
             this.navigatepageNums = new int[this.pages];
 
-            for(i = 0; i < this.pages; ++i) {
+            for (i = 0; i < this.pages; ++i) {
                 this.navigatepageNums[i] = i + 1;
             }
         } else {
@@ -78,22 +76,21 @@ public class PageInfo<T> implements Serializable {
             if (i < 1) {
                 i = 1;
 
-                for(i = 0; i < this.navigatePages; ++i) {
+                for (i = 0; i < this.navigatePages; ++i) {
                     this.navigatepageNums[i] = i++;
                 }
             } else if (endNum > this.pages) {
                 endNum = this.pages;
 
-                for(i = this.navigatePages - 1; i >= 0; --i) {
+                for (i = this.navigatePages - 1; i >= 0; --i) {
                     this.navigatepageNums[i] = endNum--;
                 }
             } else {
-                for(i = 0; i < this.navigatePages; ++i) {
+                for (i = 0; i < this.navigatePages; ++i) {
                     this.navigatepageNums[i] = i++;
                 }
             }
         }
-
     }
 
     private void calcPage() {
@@ -108,7 +105,6 @@ public class PageInfo<T> implements Serializable {
                 this.nextPage = this.pageNum + 1;
             }
         }
-
     }
 
     private void judgePageBoudary() {
@@ -182,13 +178,17 @@ public class PageInfo<T> implements Serializable {
         this.list = list;
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     @Deprecated
     public int getFirstPage() {
         return this.navigateFirstPage;
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     @Deprecated
     public void setFirstPage(int firstPage) {
         this.navigateFirstPage = firstPage;
@@ -210,13 +210,17 @@ public class PageInfo<T> implements Serializable {
         this.nextPage = nextPage;
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     @Deprecated
     public int getLastPage() {
         return this.navigateLastPage;
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     @Deprecated
     public void setLastPage(int lastPage) {
         this.navigateLastPage = lastPage;
@@ -311,7 +315,7 @@ public class PageInfo<T> implements Serializable {
         } else {
             sb.append('[');
 
-            for(int i = 0; i < this.navigatepageNums.length; ++i) {
+            for (int i = 0; i < this.navigatepageNums.length; ++i) {
                 sb.append(i == 0 ? "" : ", ").append(this.navigatepageNums[i]);
             }
 

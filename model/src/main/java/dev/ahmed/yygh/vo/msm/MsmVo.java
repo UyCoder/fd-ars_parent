@@ -18,5 +18,5 @@ public class MsmVo {
     private String templateCode;
 
     @ApiModelProperty(value = "parameters")
-    private Map<String,Object> param;
+    private Map<String, Object> param;
 }

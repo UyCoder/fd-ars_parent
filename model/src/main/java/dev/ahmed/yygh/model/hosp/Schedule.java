@@ -25,48 +25,47 @@ import java.util.Date;
 @ApiModel(description = "Schedule")
 @Document("Schedule")
 public class Schedule extends BaseMongoEntity {
-	
-	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "hoscode")
-	@Indexed //普通索引
-	private String hoscode;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "depcode")
-	@Indexed //普通索引
-	private String depcode;
+    @ApiModelProperty(value = "hoscode")
+    @Indexed //普通索引
+    private String hoscode;
 
-	@ApiModelProperty(value = "title")
-	private String title;
+    @ApiModelProperty(value = "depcode")
+    @Indexed //普通索引
+    private String depcode;
 
-	@ApiModelProperty(value = "docname")
-	private String docname;
+    @ApiModelProperty(value = "title")
+    private String title;
 
-	@ApiModelProperty(value = "skill")
-	private String skill;
+    @ApiModelProperty(value = "docname")
+    private String docname;
 
-	@ApiModelProperty(value = "workDate")
-	@JsonFormat(pattern = "yyyy-MM-dd")
-	private Date workDate;
+    @ApiModelProperty(value = "skill")
+    private String skill;
 
-	@ApiModelProperty(value = "workTime（0：上午 1：下午）")
-	private Integer workTime;
+    @ApiModelProperty(value = "workDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date workDate;
 
-	@ApiModelProperty(value = "reservedNumber")
-	private Integer reservedNumber;
+    @ApiModelProperty(value = "workTime（0：上午 1：下午）")
+    private Integer workTime;
 
-	@ApiModelProperty(value = "availableNumber")
-	private Integer availableNumber;
+    @ApiModelProperty(value = "reservedNumber")
+    private Integer reservedNumber;
 
-	@ApiModelProperty(value = "amount")
-	private BigDecimal amount;
+    @ApiModelProperty(value = "availableNumber")
+    private Integer availableNumber;
 
-	@ApiModelProperty(value = "status（-1：停诊 0：停约 1：可约）")
-	private Integer status;
+    @ApiModelProperty(value = "amount")
+    private BigDecimal amount;
 
-	@ApiModelProperty(value = "hosScheduleId（医院自己的排班主键）")
-	@Indexed //普通索引
-	private String hosScheduleId;
+    @ApiModelProperty(value = "status（-1：停诊 0：停约 1：可约）")
+    private Integer status;
 
+    @ApiModelProperty(value = "hosScheduleId（医院自己的排班主键）")
+    @Indexed //普通索引
+    private String hosScheduleId;
 }
 

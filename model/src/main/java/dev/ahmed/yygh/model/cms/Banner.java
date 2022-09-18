@@ -19,24 +19,23 @@ import lombok.Data;
 @ApiModel(description = "Banner")
 @TableName("banner")
 public class Banner extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "title")
-	@TableField("title")
-	private String title;
 
-	@ApiModelProperty(value = "imageUrl")
-	@TableField("image_url")
-	private String imageUrl;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "linkUrl")
-	@TableField("link_url")
-	private String linkUrl;
+    @ApiModelProperty(value = "title")
+    @TableField("title")
+    private String title;
 
-	@ApiModelProperty(value = "sort")
-	@TableField("sort")
-	private Integer sort;
+    @ApiModelProperty(value = "imageUrl")
+    @TableField("image_url")
+    private String imageUrl;
 
+    @ApiModelProperty(value = "linkUrl")
+    @TableField("link_url")
+    private String linkUrl;
+
+    @ApiModelProperty(value = "sort")
+    @TableField("sort")
+    private Integer sort;
 }
 

@@ -20,28 +20,27 @@ import lombok.Data;
 @TableName("acl_user")
 public class User extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "username")
-	@TableField("username")
-	private String username;
+    @ApiModelProperty(value = "username")
+    @TableField("username")
+    private String username;
 
-	@ApiModelProperty(value = "password")
-	@TableField("password")
-	private String password;
+    @ApiModelProperty(value = "password")
+    @TableField("password")
+    private String password;
 
-	@ApiModelProperty(value = "nickName")
-	@TableField("nick_name")
-	private String nickName;
+    @ApiModelProperty(value = "nickName")
+    @TableField("nick_name")
+    private String nickName;
 
-	@ApiModelProperty(value = "salt")
-	@TableField("salt")
-	private String salt;
+    @ApiModelProperty(value = "salt")
+    @TableField("salt")
+    private String salt;
 
-	@ApiModelProperty(value = "token")
-	@TableField("token")
-	private String token;
-
+    @ApiModelProperty(value = "token")
+    @TableField("token")
+    private String token;
 }
 
 

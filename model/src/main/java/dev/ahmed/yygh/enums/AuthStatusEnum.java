@@ -5,8 +5,7 @@ public enum AuthStatusEnum {
     NO_AUTH(0, "No Auth"),
     AUTH_RUN(1, "Auth Run"),
     AUTH_SUCCESS(2, "Auth Success"),
-    AUTH_FAIL(-1, "Auth Fail");
-    ;
+    AUTH_FAIL(-1, "Auth Fail");;
 
     private Integer status;
     private String name;

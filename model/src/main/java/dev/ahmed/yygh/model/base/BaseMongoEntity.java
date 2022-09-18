@@ -32,5 +32,5 @@ public class BaseMongoEntity implements Serializable {
 
     @ApiModelProperty(value = "parameters")
     @Transient //被该注解标注的，将不会被录入到数据库中。只作为普通的javaBean属性
-    private Map<String,Object> param = new HashMap<>();
+    private Map<String, Object> param = new HashMap<>();
 }

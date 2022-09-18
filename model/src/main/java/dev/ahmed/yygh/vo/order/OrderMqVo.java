@@ -11,17 +11,16 @@ import java.util.Date;
 @ApiModel(description = "OrderMqVo")
 public class OrderMqVo {
 
-	@ApiModelProperty(value = "reservedNumber")
-	private Integer reservedNumber;
+    @ApiModelProperty(value = "reservedNumber")
+    private Integer reservedNumber;
 
-	@ApiModelProperty(value = "availableNumber")
-	private Integer availableNumber;
+    @ApiModelProperty(value = "availableNumber")
+    private Integer availableNumber;
 
-	@ApiModelProperty(value = "scheduleId")
-	private String scheduleId;
+    @ApiModelProperty(value = "scheduleId")
+    private String scheduleId;
 
-	@ApiModelProperty(value = "msmVo")
-	private MsmVo msmVo;
-
+    @ApiModelProperty(value = "msmVo")
+    private MsmVo msmVo;
 }
 

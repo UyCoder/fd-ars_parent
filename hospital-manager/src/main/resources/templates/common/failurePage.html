@@ -20,14 +20,14 @@
     </div>
 </div>
 <script type="text/javascript">
-    function goBack(){
-        try{
-            if(window.opener){
+    function goBack() {
+        try {
+            if (window.opener) {
                 window.close();
-            }else{
+            } else {
                 history.go(-1);
             }
-        }catch(err){
+        } catch (err) {
         }
     }
 </script>

@@ -43,7 +43,6 @@ public class HospitalSetServiceController {
         return Result.ok(list);
     }
 
-
     // 2. delet hospitalSet
     @ApiOperation(value = "Logical delete hospitalSet by id")
     @DeleteMapping("{id}")
@@ -55,7 +54,6 @@ public class HospitalSetServiceController {
             return Result.fail();
         }
     }
-
 
     // 3. find hospital with conditional query and paging
     @ApiOperation(value = "find hospital with conditional query and paging")
@@ -82,7 +80,6 @@ public class HospitalSetServiceController {
 
         return Result.ok(pageHospitalSet);
     }
-
 
     // 4. add hospitalSet
     @ApiOperation(value = "add hospitalSet")
@@ -141,7 +138,6 @@ public class HospitalSetServiceController {
         return Result.ok();
     }
 
-
     // 8. config hospitalSet lock status
     @ApiOperation(value = "config hospitalSet lock status")
     @PutMapping("lockHospitalSet/{id}/{status}")
@@ -167,7 +163,6 @@ public class HospitalSetServiceController {
         //TODO: send key to hospitalSet
         return Result.ok();
     }
-
 }
 
 

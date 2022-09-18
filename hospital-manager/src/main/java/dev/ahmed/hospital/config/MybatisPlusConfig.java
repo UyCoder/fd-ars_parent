@@ -34,7 +34,6 @@ public class MybatisPlusConfig {
     public ISqlInjector sqlInjector() {
         return new LogicSqlInjector();
     }
-
     /**
      * SQL执行效率插件
      */

@@ -16,18 +16,19 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public String error(Exception e){
+    public String error(Exception e) {
         e.printStackTrace();
         return "error";
     }
 
     /**
      * 自定义异常处理方法
+     *
      * @param e
      * @return
      */
     @ExceptionHandler(YyghException.class)
-    public String error(YyghException e, Model model){
+    public String error(YyghException e, Model model) {
         model.addAttribute("message", e.getMessage());
         return "error";
     }

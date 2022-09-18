@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("dev.ahmed.yygh.cmn.mapper")
 public class CmnConfig {
-
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();

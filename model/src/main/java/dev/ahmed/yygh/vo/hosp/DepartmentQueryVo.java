@@ -7,21 +7,21 @@ import lombok.Data;
 @Data
 @ApiModel(description = "Department")
 public class DepartmentQueryVo {
-	
-	@ApiModelProperty(value = "hoscode")
-	private String hoscode;
 
-	@ApiModelProperty(value = "depcode")
-	private String depcode;
+    @ApiModelProperty(value = "hoscode")
+    private String hoscode;
 
-	@ApiModelProperty(value = "depname")
-	private String depname;
+    @ApiModelProperty(value = "depcode")
+    private String depcode;
 
-	@ApiModelProperty(value = "bigcode")
-	private String bigcode;
+    @ApiModelProperty(value = "depname")
+    private String depname;
 
-	@ApiModelProperty(value = "bigname")
-	private String bigname;
+    @ApiModelProperty(value = "bigcode")
+    private String bigcode;
+
+    @ApiModelProperty(value = "bigname")
+    private String bigname;
 
 }
 

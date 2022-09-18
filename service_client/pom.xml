@@ -26,9 +26,9 @@
         </dependency>
 
         <dependency>
-                <groupId>dev.ahmed</groupId>
-                <artifactId>model</artifactId>
-                <version>1.0</version>
+            <groupId>dev.ahmed</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <dependency>
@@ -45,7 +45,6 @@
         </dependency>
 
     </dependencies>
-
 
 
 </project>

@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="RegisterVo")
+@ApiModel(description = "RegisterVo")
 public class RegisterVo {
 
     @ApiModelProperty(value = "mobile")

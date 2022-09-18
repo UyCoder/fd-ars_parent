@@ -18,36 +18,35 @@ import lombok.Data;
 @ApiModel(description = "hospitalSet")
 @TableName("hospital_set")
 public class HospitalSet extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "hosname")
-	@TableField("hosname")
-	private String hosname;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "hoscode")
-	@TableField("hoscode")
-	private String hoscode;
+    @ApiModelProperty(value = "hosname")
+    @TableField("hosname")
+    private String hosname;
 
-	@ApiModelProperty(value = "apiUrl")
-	@TableField("api_url")
-	private String apiUrl;
+    @ApiModelProperty(value = "hoscode")
+    @TableField("hoscode")
+    private String hoscode;
 
-	@ApiModelProperty(value = "signKey")
-	@TableField("sign_key")
-	private String signKey;
+    @ApiModelProperty(value = "apiUrl")
+    @TableField("api_url")
+    private String apiUrl;
 
-	@ApiModelProperty(value = "contactsName")
-	@TableField("contacts_name")
-	private String contactsName;
+    @ApiModelProperty(value = "signKey")
+    @TableField("sign_key")
+    private String signKey;
 
-	@ApiModelProperty(value = "contactsPhone")
-	@TableField("contacts_phone")
-	private String contactsPhone;
+    @ApiModelProperty(value = "contactsName")
+    @TableField("contacts_name")
+    private String contactsName;
 
-	@ApiModelProperty(value = "status")
-	@TableField("status")
-	private Integer status;
+    @ApiModelProperty(value = "contactsPhone")
+    @TableField("contacts_phone")
+    private String contactsPhone;
 
+    @ApiModelProperty(value = "status")
+    @TableField("status")
+    private Integer status;
 }
 

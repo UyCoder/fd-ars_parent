@@ -21,52 +21,51 @@ import java.util.List;
 @ApiModel(description = "Permission")
 @TableName("acl_permission")
 public class Permission extends BaseEntity {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@ApiModelProperty(value = "pid")
-	@TableField("pid")
-	private Long pid;
 
-	@ApiModelProperty(value = "name")
-	@TableField("name")
-	private String name;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "type(1:菜单,2:按钮)")
-	@TableField("type")
-	private Integer type;
+    @ApiModelProperty(value = "pid")
+    @TableField("pid")
+    private Long pid;
 
-	@ApiModelProperty(value = "permissionValue")
-	@TableField("permission_value")
-	private String permissionValue;
+    @ApiModelProperty(value = "name")
+    @TableField("name")
+    private String name;
 
-	@ApiModelProperty(value = "path")
-	@TableField("path")
-	private String path;
+    @ApiModelProperty(value = "type(1:菜单,2:按钮)")
+    @TableField("type")
+    private Integer type;
 
-	@ApiModelProperty(value = "component")
-	@TableField("component")
-	private String component;
+    @ApiModelProperty(value = "permissionValue")
+    @TableField("permission_value")
+    private String permissionValue;
 
-	@ApiModelProperty(value = "icon")
-	@TableField("icon")
-	private String icon;
+    @ApiModelProperty(value = "path")
+    @TableField("path")
+    private String path;
 
-	@ApiModelProperty(value = "status(0:禁止,1:正常)")
-	@TableField("status")
-	private Integer status;
+    @ApiModelProperty(value = "component")
+    @TableField("component")
+    private String component;
 
-	@ApiModelProperty(value = "level")
-	@TableField(exist = false)
-	private Integer level;
+    @ApiModelProperty(value = "icon")
+    @TableField("icon")
+    private String icon;
 
-	@ApiModelProperty(value = "children")
-	@TableField(exist = false)
-	private List<Permission> children;
+    @ApiModelProperty(value = "status(0:禁止,1:正常)")
+    @TableField("status")
+    private Integer status;
 
-	@ApiModelProperty(value = "isSelected")
-	@TableField(exist = false)
-	private boolean isSelect;
+    @ApiModelProperty(value = "level")
+    @TableField(exist = false)
+    private Integer level;
 
+    @ApiModelProperty(value = "children")
+    @TableField(exist = false)
+    private List<Permission> children;
+
+    @ApiModelProperty(value = "isSelected")
+    @TableField(exist = false)
+    private boolean isSelect;
 }
 

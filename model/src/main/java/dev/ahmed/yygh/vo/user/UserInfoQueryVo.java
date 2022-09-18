@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="UserInfoQueryVo")
+@ApiModel(description = "UserInfoQueryVo")
 public class UserInfoQueryVo {
 
     @ApiModelProperty(value = "keyword")
@@ -22,5 +22,4 @@ public class UserInfoQueryVo {
 
     @ApiModelProperty(value = "createTimeEnd")
     private String createTimeEnd;
-
 }

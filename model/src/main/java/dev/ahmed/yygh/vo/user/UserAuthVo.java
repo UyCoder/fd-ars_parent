@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(description="UserAuthVo")
+@ApiModel(description = "UserAuthVo")
 public class UserAuthVo {
 
     @ApiModelProperty(value = "name")
@@ -24,5 +24,4 @@ public class UserAuthVo {
     @ApiModelProperty(value = "certificatesUrl")
     @TableField("certificates_url")
     private String certificatesUrl;
-
 }
