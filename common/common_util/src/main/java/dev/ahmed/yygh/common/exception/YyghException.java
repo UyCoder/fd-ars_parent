@@ -19,7 +19,6 @@ public class YyghException extends RuntimeException {
 
     /**
      * Create exception object with status code and error message
-     *
      * @param message
      * @param code
      */
